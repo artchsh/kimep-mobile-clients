@@ -42,7 +42,7 @@ Request:
 
 ```json
 {
-  "StudentId": "20231178",
+  "StudentId": "12345678",
   "Password": "<plaintext password>",
   "Token": "null"
 }
@@ -57,7 +57,7 @@ Response `200`:
 
 ```json
 {
-  "id": "c5780c74-0d6c-4131-a7f9-17ba234307a9",
+  "id": "00000000-0000-0000-0000-000000000000",
   "ExpiredOn": "\/Date(1790754833223)\/"
 }
 ```
@@ -81,10 +81,10 @@ Response `200`:
 
 ```json
 {
-  "StudentID": 20231178,
-  "FirstName": "Artyom",
-  "LastName": "Chshyogolev",
-  "ProgramID": "Bisb",
+  "StudentID": 12345678,
+  "FirstName": "Alex",
+  "LastName": "Example",
+  "ProgramID": "BSc",
   "XRay": "\/Date(1785783600000)\/"
 }
 ```
@@ -93,7 +93,7 @@ Response `200`:
 |---|---|---|
 | `StudentID` | int | |
 | `FirstName` / `LastName` | string | |
-| `ProgramID` | string | program code, e.g. `"Bisb"` |
+| `ProgramID` | string | program code, e.g. `"BSc"` |
 | `XRay` | date | a date the server reports (purpose unconfirmed) |
 
 ---
@@ -112,12 +112,12 @@ Response `200` — array of scheduled class meetings:
     "ID": 117400,
     "WeekDay": "Monday",
     "Semester": "F2026",
-    "Title": "Management Accounting I",
-    "CourseID": "CostMngtAcc",
-    "Hall": "#126/Valikhanov bld.",
-    "Instructor": "Saule Dyussembina, Ph.D",
-    "LDrive": "\\\\l-drive\\lecture\\Saule Dyussembina",
-    "Section": "6",
+    "Title": "Example Course",
+    "CourseID": "EX101",
+    "Hall": "#101/Example bld.",
+    "Instructor": "Jane Doe, Ph.D",
+    "LDrive": "\\\\l-drive\\lecture\\Jane Doe",
+    "Section": "1",
     "Time_From": "\/Date(-2209136400000)\/",
     "Time_To": "\/Date(-2209131900000)\/",
     "Date_From": "\/Date(1787598000000)\/",
@@ -218,7 +218,7 @@ Request: `{"id":"<GUID>"}`
 Response `200`:
 
 ```json
-{ "GPA": 2.7914851485148513, "CreditsEarned": 98, "CreditsTaken": 101 }
+{ "GPA": 3.25, "CreditsEarned": 87, "CreditsTaken": 120 }
 ```
 
 | Field | Type | Notes |
@@ -235,10 +235,10 @@ Response `200`:
 
 ```json
 [
-  { "ID": 20231178, "Semester": "SU1/2026", "Title": "Business Law",
-    "Grade": "C-", "Point": 1.67 },
-  { "ID": 20231178, "Semester": "S2026", "Title": "Financial Accounting I",
-    "Grade": "D+", "Point": 1.33 }
+  { "ID": 12345678, "Semester": "SU1/2026", "Title": "Example Course A",
+    "Grade": "B", "Point": 3.0 },
+  { "ID": 12345678, "Semester": "S2026", "Title": "Example Course B",
+    "Grade": "A-", "Point": 3.67 }
 ]
 ```
 
@@ -260,8 +260,8 @@ Response `200`:
 [
   {
     "Semester": "F2026",
-    "Code": "ACC2201",
-    "TitleCourses": "Management Accounting I",
+    "Code": "EX101",
+    "TitleCourses": "Example Course",
     "Registration": "x",
     "Score1": null,
     "Score2": null,
@@ -301,7 +301,7 @@ BASE=https://www.kimep.kz/ext/mobile
 curl -s "$BASE/auth/login" \
   -H 'Content-Type: application/json; charset=UTF-8' \
   -H 'Accept: application/json' \
-  -d '{"StudentId":"20231178","Password":"<pw>","Token":"null"}'
+  -d '{"StudentId":"12345678","Password":"<pw>","Token":"null"}'
 
 ID="<id from login response>"
 

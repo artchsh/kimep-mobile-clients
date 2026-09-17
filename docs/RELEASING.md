@@ -87,7 +87,7 @@ uninstalled before a newly signed build can be installed.
 The certificate is:
 
 ```
-CN=KIMEP Mobile, OU=Personal, O=Artyom Chshyogolev, L=Almaty, C=KZ
+CN=KIMEP Mobile, OU=Personal, O=Personal, L=Almaty, C=KZ
 SHA-256 183b1c40ae125cd925eb328207d64b0ccf081611b7543a7dd374796e220dfb26
 ```
 
