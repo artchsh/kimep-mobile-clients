@@ -69,6 +69,7 @@ docs/
   CAPTURE_SETUP.md      how the API was captured from a stock iPhone
   ARCHITECTURE.md       Android app architecture
   RELEASING.md          how to cut a release (CI signs automatically)
+  DEVICE_SUPPORT.md     supported OS/ABIs/form factors and known limitations
 tools/
   parse_calendar.py     KIMEP calendar PDF -> calendar.json
 capture.py              mitmproxy addon used during reverse engineering
