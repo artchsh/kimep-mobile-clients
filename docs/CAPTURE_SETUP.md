@@ -108,7 +108,7 @@ no-resolv
 server=8.8.8.8
 server=1.1.1.1
 log-queries
-log-facility=/Users/artchsh/Desktop/kimep-reverse/captures/dnsmasq.log
+log-facility=/tmp/kimep-dnsmasq.log
 ```
 
 ```bash
