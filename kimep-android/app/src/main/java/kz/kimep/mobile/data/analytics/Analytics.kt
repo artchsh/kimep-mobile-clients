@@ -152,6 +152,6 @@ class UmamiAnalytics(
     }
 
     private companion object {
-        const val HOSTNAME = "kimep-mobile-app"
+        const val HOSTNAME = "kz.kimep.mobile.unofficial"
     }
 }
