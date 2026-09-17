@@ -67,6 +67,11 @@ Tags containing `beta`, `alpha` or `rc` are published as pre-releases automatica
 - Runs `apksigner verify --print-certs` on the release APK and fails if signing is wrong.
 - Uploads both APKs as build artifacts (`apks-<sha>`).
 - On a `v*` tag, creates the GitHub release and attaches the signed release APK.
+- Dispatches the Pages workflow so the download page picks up the new version.
+
+> Note: GitHub does not let events created with the default `GITHUB_TOKEN` trigger other
+> workflows, so `pages.yml`'s own `release: published` trigger will not fire by itself. The
+> explicit `gh workflow run pages.yml` step in `android.yml` is what refreshes the site.
 
 If the secrets are not present (e.g. a fork or a pull request from a fork), the keystore
 step is skipped and the release build falls back to the debug signing config, so the
