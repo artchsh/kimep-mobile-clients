@@ -41,8 +41,19 @@ fun KimepRoot() {
     ) {
         if (container.analyticsEnabled && consent == ConsentState.Undecided) {
             PrivacyConsentScreen(
-                onAccept = { scope.launch { container.analyticsStore.setConsent(true) } },
-                onDecline = { scope.launch { container.analyticsStore.setConsent(false) } },
+                onAccept = {
+                    scope.launch {
+                        container.analyticsStore.setConsent(true)
+                        container.analytics.track(
+                            AnalyticsEvents.CONSENT,
+                            mapOf("decision" to "granted", "source" to "first_run"),
+                        )
+                    }
+                },
+                onDecline = {
+                    // Nothing is sent: tracking only starts once consent is granted.
+                    scope.launch { container.analyticsStore.setConsent(false) }
+                },
             )
             return@Surface
         }

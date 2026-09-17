@@ -49,10 +49,16 @@ class SettingsViewModel(
         viewModelScope.launch {
             if (granted) {
                 analyticsStore.setConsent(true)
-                analytics.track(AnalyticsEvents.CONSENT, mapOf("decision" to "granted"))
+                analytics.track(
+                    AnalyticsEvents.CONSENT,
+                    mapOf("decision" to "granted", "source" to "settings"),
+                )
             } else {
                 // Record the opt-out while tracking is still permitted, then stop and forget.
-                analytics.track(AnalyticsEvents.CONSENT, mapOf("decision" to "denied"))
+                analytics.track(
+                    AnalyticsEvents.CONSENT,
+                    mapOf("decision" to "denied", "source" to "settings"),
+                )
                 analyticsStore.setConsent(false)
                 analyticsStore.clearIdentity()
             }
