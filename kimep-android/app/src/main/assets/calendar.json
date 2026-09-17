@@ -1,0 +1,1498 @@
+{
+  "years": [
+    {
+      "id": "2026-2027",
+      "title": "Academic Calendar 2026-2027",
+      "semesters": [
+        {
+          "id": "F",
+          "name": "Fall 2026",
+          "events": [
+            {
+              "title": "Advising starts",
+              "start": "2026-06-22",
+              "end": "2026-06-22",
+              "display": "Monday, June 22, 2026"
+            },
+            {
+              "title": "Registration for 4th year undergraduate students, Honored students, students with special needs, all Master and Doctor students begins (1/3 payment + Student and annual Medical Fees are required prior to registration for Fall and Spring semesters and 100% payment for summer semesters)",
+              "start": "2026-07-20",
+              "end": "2026-07-20",
+              "display": "Monday, July 20, 2026"
+            },
+            {
+              "title": "Registration for 3d year Undergraduate students begins (1/3 payment + Student and annual Medical Fees are required prior to registration for Fall and Spring semesters and 100% payment for summer semesters)",
+              "start": "2026-07-23",
+              "end": "2026-07-23",
+              "display": "Thursday, July 23, 2026"
+            },
+            {
+              "title": "Registration for Freshmen (1/3 payment + Student and annual Medical Fees are required prior to registration for Fall and Spring semesters and 100% payment for summer semesters)",
+              "start": "2026-07-27",
+              "end": "2026-07-27",
+              "display": "Monday, July 27, 2026"
+            },
+            {
+              "title": "Registration for 2nd year Undergraduate students begins (1/3 payment + Student and annual Medical Fees are required prior to registration for Fall and Spring semesters and 100% payment for summer semesters)",
+              "start": "2026-07-30",
+              "end": "2026-07-30",
+              "display": "Thursday, July 30, 2026"
+            },
+            {
+              "title": "Registration for 1st year Undergraduate and Non degree students upon submission of original doc certifying high school/higher education begins (1/3 payment + Student and annual Medical Fees are required prior to registration for Fall and Spring semesters and 100% payment for summer semesters)",
+              "start": "2026-08-03",
+              "end": "2026-08-03",
+              "display": "Monday, August 3, 2026"
+            },
+            {
+              "title": "Registration for non-degree students (who did not submit Authentic documents) begins (100% payment for all courses + Student Fee is required)",
+              "start": "2026-08-10",
+              "end": "2026-08-10",
+              "display": "Monday, August 10, 2026"
+            },
+            {
+              "title": "Registration ends",
+              "start": "2026-08-23",
+              "end": "2026-08-23",
+              "display": "Sunday, August 23, 2026"
+            },
+            {
+              "title": "Semester starts with Orientation sessions for freshmen",
+              "start": "2026-08-21",
+              "end": "2026-08-21",
+              "display": "Friday, August 21, 2026"
+            },
+            {
+              "title": "Classes start",
+              "start": "2026-08-24",
+              "end": "2026-08-24",
+              "display": "Monday, August 24, 2026"
+            },
+            {
+              "title": "Internship start",
+              "start": "2026-08-24",
+              "end": "2026-08-24",
+              "display": "Monday, August 24, 2026"
+            },
+            {
+              "title": "Add/Drop period",
+              "start": "2026-08-24",
+              "end": "2026-08-31",
+              "display": "08/24/2026 - 8/31/2026"
+            },
+            {
+              "title": "Late Registration period for all students (need Instructors' approval)",
+              "start": "2026-09-01",
+              "end": "2026-09-07",
+              "display": "09/1/2026 - 09/7/2026"
+            },
+            {
+              "title": "Withdraw from a Course with 80% Tuition Refund with a \"W\" grade (online)",
+              "start": "2026-09-01",
+              "end": "2026-09-07",
+              "display": "09/1/2026 - 09/7/2026"
+            },
+            {
+              "title": "Withdraw from a Course with 60% Tuition Refund with a \"W\" grade (online)",
+              "start": "2026-09-08",
+              "end": "2026-09-14",
+              "display": "09/8/2026 - 09/14/2026"
+            },
+            {
+              "title": "Withdraw from a Course with 40% Tuition Refund with a \"W\" grade (online)",
+              "start": "2026-09-15",
+              "end": "2026-09-21",
+              "display": "09/15/2026 - 09/21/2026"
+            },
+            {
+              "title": "Withdraw from a Course with 20% Tuition Refund with a \"W\" grade (online)",
+              "start": "2026-09-22",
+              "end": "2026-09-28",
+              "display": "9/22/2026 - 09/28/2026"
+            },
+            {
+              "title": "Second Payment Deadline - Friday of 5th week (second 1/3 of total tuition is due)",
+              "start": "2026-09-25",
+              "end": "2026-09-25",
+              "display": "Friday, September 25, 2026"
+            },
+            {
+              "title": "From this date there are no refunds for withdrawals from courses with a \"W\" grade (online)",
+              "start": "2026-09-29",
+              "end": "2026-09-29",
+              "display": "Tuesday, September 29, 2026"
+            },
+            {
+              "title": "First Progress Submission deadline",
+              "start": "2026-10-12",
+              "end": "2026-10-12",
+              "display": "Monday, October 12, 2026"
+            },
+            {
+              "title": "\"I\" grades from previous semester convert into \"F\"s (7'th week of classes)",
+              "start": "2026-10-05",
+              "end": "2026-10-11",
+              "display": "10/5/2026 - 10/11/2026"
+            },
+            {
+              "title": "Study Break",
+              "start": "2026-10-12",
+              "end": "2026-10-18",
+              "display": "10/12/2026 - 10/18/2026"
+            },
+            {
+              "title": "Third Payment Deadline - Friday 9'th week (final 1/3 of total tuition is due)",
+              "start": "2026-10-23",
+              "end": "2026-10-23",
+              "display": "Friday, October 23, 2026"
+            },
+            {
+              "title": "Second Progress Submission deadline",
+              "start": "2026-11-23",
+              "end": "2026-11-23",
+              "display": "Monday, November 23, 2026"
+            },
+            {
+              "title": "Administrative Withdrawal from courses of students with overdue tuition balance (Friday 13'th week)",
+              "start": "2026-11-20",
+              "end": "2026-11-20",
+              "display": "Friday, November 20, 2026"
+            },
+            {
+              "title": "Last day to reinstate after Administrative withdraw from courses due to the tuition balanse overdue (Friday 15'th week)",
+              "start": "2026-12-04",
+              "end": "2026-12-04",
+              "display": "Friday, December 4, 2026"
+            },
+            {
+              "title": "Last Day to Withdraw from a Courses with a \"W\" grade (online)",
+              "start": "2026-12-14",
+              "end": "2026-12-14",
+              "display": "Monday, December 14, 2026"
+            },
+            {
+              "title": "Internship ends",
+              "start": "2026-12-14",
+              "end": "2026-12-14",
+              "display": "Monday, December 14, 2026"
+            },
+            {
+              "title": "Classes End",
+              "start": "2026-12-14",
+              "end": "2026-12-14",
+              "display": "Monday, December 14, 2026"
+            },
+            {
+              "title": "Final Assessments Starts, Examination Period and Final Attestation",
+              "start": "2026-12-15",
+              "end": "2026-12-27",
+              "display": "15 and 17-27 December 2026"
+            },
+            {
+              "title": "Semester Ends",
+              "start": "2026-12-27",
+              "end": "2026-12-27",
+              "display": "Sunday, December 27, 2026"
+            },
+            {
+              "title": "Change Grade Forms due (2 weeks after semester ends, for Fall - 1st week of Spring classes)",
+              "start": "2027-01-15",
+              "end": "2027-01-15",
+              "display": "Friday, January 15, 2027"
+            }
+          ]
+        },
+        {
+          "id": "S",
+          "name": "Spring 2027",
+          "events": [
+            {
+              "title": "Advising starts",
+              "start": "2026-11-02",
+              "end": "2026-11-02",
+              "display": "Monday, November 2, 2026"
+            },
+            {
+              "title": "Registration for 4th year undergraduate students, Honored students, students with special needs, all Master and Doctor students begins (1/3 payment + Student and annual Medical Fees are required prior to registration for Fall and Spring semesters and 100% payment for summer semesters)",
+              "start": "2026-11-30",
+              "end": "2026-11-30",
+              "display": "Monday, November 30, 2026"
+            },
+            {
+              "title": "Registration for 3d year Undergraduate students begins (1/3 payment + Student and annual Medical Fees are required prior to registration for Fall and Spring semesters and 100% payment for summer semesters)",
+              "start": "2026-12-03",
+              "end": "2026-12-03",
+              "display": "Thursday, December 3, 2026"
+            },
+            {
+              "title": "Registration for Freshmen (1/3 payment + Student and annual Medical Fees are required prior to registration for Fall and Spring semesters and 100% payment for summer semesters)",
+              "start": "2026-12-07",
+              "end": "2026-12-07",
+              "display": "Monday, December 7, 2026"
+            },
+            {
+              "title": "Registration for 2nd year Undergraduate students begins (1/3 payment + Student and annual Medical Fees are required prior to registration for Fall and Spring semesters and 100% payment for summer semesters)",
+              "start": "2026-12-10",
+              "end": "2026-12-10",
+              "display": "Thursday, December 10, 2026"
+            },
+            {
+              "title": "Registration for 1st year Undergraduate and Non degree students upon submission of original doc certifying high school/higher education begins (1/3 payment + Student and annual Medical Fees are required prior to registration for Fall and Spring semesters and 100% payment for summer semesters)",
+              "start": "2026-12-14",
+              "end": "2026-12-14",
+              "display": "Monday, December 14, 2026"
+            },
+            {
+              "title": "Registration for non-degree students (who did not submit Authentic documents) begins (100% payment for all courses + Student Fee is required)",
+              "start": "2026-12-21",
+              "end": "2026-12-21",
+              "display": "Monday, December 21, 2026"
+            },
+            {
+              "title": "Registration ends",
+              "start": "2027-01-10",
+              "end": "2027-01-10",
+              "display": "Sunday, January 10, 2027"
+            },
+            {
+              "title": "Semester starts with Orientation sessions for freshmen",
+              "start": "2027-01-18",
+              "end": "2027-01-19",
+              "display": "01/18/2027 - 01/19/2027"
+            },
+            {
+              "title": "Classes start",
+              "start": "2027-01-11",
+              "end": "2027-01-11",
+              "display": "Monday, January 11, 2027"
+            },
+            {
+              "title": "Internship start",
+              "start": "2027-01-11",
+              "end": "2027-01-11",
+              "display": "Monday, January 11, 2027"
+            },
+            {
+              "title": "Add/Drop period",
+              "start": "2027-01-11",
+              "end": "2027-01-17",
+              "display": "01/11/2027 - 01/17/2027"
+            },
+            {
+              "title": "Late Registration period for all students (need Instructors' approval)",
+              "start": "2027-01-18",
+              "end": "2027-01-24",
+              "display": "01/18/2027 - 01/24/2027"
+            },
+            {
+              "title": "Withdraw from a Course with 80% Tuition Refund with a \"W\" grade (online)",
+              "start": "2027-01-18",
+              "end": "2027-01-24",
+              "display": "01/18/2027 - 01/24/2027"
+            },
+            {
+              "title": "Withdraw from a Course with 60% Tuition Refund with a \"W\" grade (online)",
+              "start": "2027-01-25",
+              "end": "2027-01-31",
+              "display": "01/25/2027 - 01/31/2027"
+            },
+            {
+              "title": "Withdraw from a Course with 40% Tuition Refund with a \"W\" grade (online)",
+              "start": "2027-02-01",
+              "end": "2027-02-07",
+              "display": "02/1/2027 - 02/7/2027"
+            },
+            {
+              "title": "Withdraw from a Course with 20% Tuition Refund with a \"W\" grade (online)",
+              "start": "2027-02-08",
+              "end": "2027-02-14",
+              "display": "02/8/2027 - 02/14/2027"
+            },
+            {
+              "title": "Second Payment Deadline - Friday of 5th week (second 1/3 of total tuition is due)",
+              "start": "2027-02-12",
+              "end": "2027-02-12",
+              "display": "Friday, February 12, 2027"
+            },
+            {
+              "title": "From this date there are no refunds for withdrawals from courses with a \"W\" grade (online)",
+              "start": "2027-02-15",
+              "end": "2027-02-15",
+              "display": "Monday, February 15, 2027"
+            },
+            {
+              "title": "First Progress Submission deadline",
+              "start": "2027-03-01",
+              "end": "2027-03-01",
+              "display": "Monday, March 1, 2027"
+            },
+            {
+              "title": "\"I\" grades from previous semester convert into \"F\"s (7'th week of classes)",
+              "start": "2027-02-22",
+              "end": "2027-02-28",
+              "display": "02/22/2027 - 02/28/2027"
+            },
+            {
+              "title": "Study Break",
+              "start": "2027-03-01",
+              "end": "2027-03-07",
+              "display": "03/1/2027 - 03/7/2027"
+            },
+            {
+              "title": "Third Payment Deadline - Friday 9'th week (final 1/3 of total tuition is due)",
+              "start": "2027-03-12",
+              "end": "2027-03-12",
+              "display": "Friday, March 12, 2027"
+            },
+            {
+              "title": "Second Progress Submission deadline",
+              "start": "2027-04-12",
+              "end": "2027-04-12",
+              "display": "Monday, April 12, 2027"
+            },
+            {
+              "title": "Administrative Withdrawal from courses of students with overdue tuition balance (Friday 13'th week)",
+              "start": "2027-04-09",
+              "end": "2027-04-09",
+              "display": "Friday, April 9, 2027"
+            },
+            {
+              "title": "Last day to reinstate after Administrative withdraw from courses due to the tuition balanse overdue (Friday 15'th week)",
+              "start": "2027-04-23",
+              "end": "2027-04-23",
+              "display": "Friday, April 23, 2027"
+            },
+            {
+              "title": "Last Day to Withdraw from a Courses with a \"W\" grade (online)",
+              "start": "2027-05-05",
+              "end": "2027-05-05",
+              "display": "Wednesday, May 5, 2027"
+            },
+            {
+              "title": "Internship ends",
+              "start": "2027-05-05",
+              "end": "2027-05-05",
+              "display": "Wednesday, May 5, 2027"
+            },
+            {
+              "title": "Classes End",
+              "start": "2027-05-05",
+              "end": "2027-05-05",
+              "display": "Wednesday, May 5, 2027"
+            },
+            {
+              "title": "Final Assessments Starts, Examination Period and Final Attestation",
+              "start": "2027-05-06",
+              "end": "2027-05-19",
+              "display": "May 6,8,10-19, 2027"
+            },
+            {
+              "title": "Semester Ends",
+              "start": "2027-05-19",
+              "end": "2027-05-19",
+              "display": "Wednesday, May 19, 2027"
+            },
+            {
+              "title": "Change Grade Forms due (2 weeks after semester ends, for Fall - 1st week of Spring classes)",
+              "start": "2027-06-02",
+              "end": "2027-06-02",
+              "display": "Wednesday, June 2, 2027"
+            },
+            {
+              "title": "Graduation Ceremony",
+              "start": "2027-05-29",
+              "end": "2027-05-29",
+              "display": "Saturday, May 29, 2027"
+            }
+          ]
+        },
+        {
+          "id": "SU1",
+          "name": "Summer 1 2027",
+          "events": [
+            {
+              "title": "Advising starts",
+              "start": "2027-03-29",
+              "end": "2027-03-29",
+              "display": "Monday, March 29, 2027"
+            },
+            {
+              "title": "Registration for 4th year undergraduate students, Honored students, students with special needs, all Master and Doctor students begins (1/3 payment + Student and annual Medical Fees are required prior to registration for Fall and Spring semesters and 100% payment for summer semesters)",
+              "start": "2027-04-19",
+              "end": "2027-04-19",
+              "display": "Monday, April 19, 2027"
+            },
+            {
+              "title": "Registration for 3d year Undergraduate students begins (1/3 payment + Student and annual Medical Fees are required prior to registration for Fall and Spring semesters and 100% payment for summer semesters)",
+              "start": "2027-04-22",
+              "end": "2027-04-22",
+              "display": "Thursday, April 22, 2027"
+            },
+            {
+              "title": "Registration for Freshmen (1/3 payment + Student and annual Medical Fees are required prior to registration for Fall and Spring semesters and 100% payment for summer semesters)",
+              "start": "2027-04-26",
+              "end": "2027-04-26",
+              "display": "Monday, April 26, 2027"
+            },
+            {
+              "title": "Registration for 2nd year Undergraduate students begins (1/3 payment + Student and annual Medical Fees are required prior to registration for Fall and Spring semesters and 100% payment for summer semesters)",
+              "start": "2027-04-29",
+              "end": "2027-04-29",
+              "display": "Thursday, April 29, 2027"
+            },
+            {
+              "title": "Registration for 1st year Undergraduate and Non degree students upon submission of original doc certifying high school/higher education begins (1/3 payment + Student and annual Medical Fees are required prior to registration for Fall and Spring semesters and 100% payment for summer semesters)",
+              "start": "2027-05-04",
+              "end": "2027-05-04",
+              "display": "Tuesday, May 4, 2027"
+            },
+            {
+              "title": "Registration for non-degree students (who did not submit Authentic documents) begins (100% payment for all courses + Student Fee is required)",
+              "start": "2027-05-10",
+              "end": "2027-05-10",
+              "display": "Monday, May 10, 2027"
+            },
+            {
+              "title": "Registration ends",
+              "start": "2027-05-24",
+              "end": "2027-05-24",
+              "display": "Monday, May 24, 2027"
+            },
+            {
+              "title": "Classes start",
+              "start": "2027-05-24",
+              "end": "2027-05-24",
+              "display": "Monday, May 24, 2027"
+            },
+            {
+              "title": "Internship start",
+              "start": "2027-05-24",
+              "end": "2027-05-24",
+              "display": "Monday, May 24, 2027"
+            },
+            {
+              "title": "Add/Drop period",
+              "start": "2027-05-24",
+              "end": "2027-05-25",
+              "display": "05/24/2027 - 05/25/2027"
+            },
+            {
+              "title": "Late Registration period for all students (need Instructors' approval)",
+              "start": "2027-05-26",
+              "end": "2027-05-27",
+              "display": "05/26/2027 - 05/27/2027"
+            },
+            {
+              "title": "First Progress Submission deadline",
+              "start": "2027-06-21",
+              "end": "2027-06-21",
+              "display": "Monday, June 21, 2027"
+            },
+            {
+              "title": "Last Day to Withdraw from a Courses with a \"W\" grade (online)",
+              "start": "2027-07-01",
+              "end": "2027-07-01",
+              "display": "Thursday, July 1, 2027"
+            },
+            {
+              "title": "Internship ends",
+              "start": "2027-07-02",
+              "end": "2027-07-02",
+              "display": "Friday, July 2, 2027"
+            },
+            {
+              "title": "Classes End",
+              "start": "2027-07-02",
+              "end": "2027-07-02",
+              "display": "Friday, July 2, 2027"
+            },
+            {
+              "title": "Final Assessments Starts, Examination Period and Final Attestation",
+              "start": "2027-07-02",
+              "end": "2027-07-02",
+              "display": "Friday, July 2, 2027"
+            },
+            {
+              "title": "Semester Ends",
+              "start": "2027-07-02",
+              "end": "2027-07-02",
+              "display": "Friday, July 2, 2027"
+            },
+            {
+              "title": "Change Grade Forms due (2 weeks after semester ends, for Fall - 1st week of Spring classes)",
+              "start": "2027-07-16",
+              "end": "2027-07-16",
+              "display": "Friday, July 16, 2027"
+            }
+          ]
+        },
+        {
+          "id": "SU2",
+          "name": "Summer 2 2027",
+          "events": [
+            {
+              "title": "Advising starts",
+              "start": "2027-03-29",
+              "end": "2027-03-29",
+              "display": "Monday, March 29, 2027"
+            },
+            {
+              "title": "Registration for 4th year undergraduate students, Honored students, students with special needs, all Master and Doctor students begins (1/3 payment + Student and annual Medical Fees are required prior to registration for Fall and Spring semesters and 100% payment for summer semesters)",
+              "start": "2027-04-19",
+              "end": "2027-04-19",
+              "display": "Monday, April 19, 2027"
+            },
+            {
+              "title": "Registration for 3d year Undergraduate students begins (1/3 payment + Student and annual Medical Fees are required prior to registration for Fall and Spring semesters and 100% payment for summer semesters)",
+              "start": "2027-04-22",
+              "end": "2027-04-22",
+              "display": "Thursday, April 22, 2027"
+            },
+            {
+              "title": "Registration for Freshmen (1/3 payment + Student and annual Medical Fees are required prior to registration for Fall and Spring semesters and 100% payment for summer semesters)",
+              "start": "2027-04-26",
+              "end": "2027-04-26",
+              "display": "Monday, April 26, 2027"
+            },
+            {
+              "title": "Registration for 2nd year Undergraduate students begins (1/3 payment + Student and annual Medical Fees are required prior to registration for Fall and Spring semesters and 100% payment for summer semesters)",
+              "start": "2027-04-29",
+              "end": "2027-04-29",
+              "display": "Thursday, April 29, 2027"
+            },
+            {
+              "title": "Registration for 1st year Undergraduate and Non degree students upon submission of original doc certifying high school/higher education begins (1/3 payment + Student and annual Medical Fees are required prior to registration for Fall and Spring semesters and 100% payment for summer semesters)",
+              "start": "2027-05-04",
+              "end": "2027-05-04",
+              "display": "Tuesday, May 4, 2027"
+            },
+            {
+              "title": "Registration for non-degree students (who did not submit Authentic documents) begins (100% payment for all courses + Student Fee is required)",
+              "start": "2027-05-10",
+              "end": "2027-05-10",
+              "display": "Monday, May 10, 2027"
+            },
+            {
+              "title": "Registration ends",
+              "start": "2027-07-11",
+              "end": "2027-07-11",
+              "display": "Sunday, July 11, 2027"
+            },
+            {
+              "title": "Classes start",
+              "start": "2027-07-12",
+              "end": "2027-07-12",
+              "display": "Monday, July 12, 2027"
+            },
+            {
+              "title": "Internship start",
+              "start": "2027-07-12",
+              "end": "2027-07-12",
+              "display": "Monday, July 12, 2027"
+            },
+            {
+              "title": "Add/Drop period",
+              "start": "2027-07-12",
+              "end": "2027-07-13",
+              "display": "07/12/2027 - 07/13/2027"
+            },
+            {
+              "title": "Last Day to Withdraw from a Courses with a \"W\" grade (online)",
+              "start": "2027-07-29",
+              "end": "2027-07-29",
+              "display": "Thursday, July 29, 2027"
+            },
+            {
+              "title": "Internship ends",
+              "start": "2027-07-30",
+              "end": "2027-07-30",
+              "display": "Friday, July 30, 2027"
+            },
+            {
+              "title": "Classes End",
+              "start": "2027-07-30",
+              "end": "2027-07-30",
+              "display": "Friday, July 30, 2027"
+            },
+            {
+              "title": "Final Assessments Starts, Examination Period and Final Attestation",
+              "start": "2027-07-30",
+              "end": "2027-07-30",
+              "display": "Friday, July 30, 2027"
+            },
+            {
+              "title": "Semester Ends",
+              "start": "2027-07-30",
+              "end": "2027-07-30",
+              "display": "Friday, July 30, 2027"
+            },
+            {
+              "title": "Change Grade Forms due (2 weeks after semester ends, for Fall - 1st week of Spring classes)",
+              "start": "2027-08-13",
+              "end": "2027-08-13",
+              "display": "Friday, August 13, 2027"
+            }
+          ]
+        }
+      ],
+      "closed": [
+        {
+          "title": "Independence Day",
+          "note": "NO Make ups required",
+          "dates": [
+            {
+              "start": "2026-12-16",
+              "end": "2026-12-16",
+              "display": "Wednesday, December 16, 2026"
+            }
+          ]
+        },
+        {
+          "title": "New Year's Day",
+          "note": "",
+          "dates": [
+            {
+              "start": "2027-01-01",
+              "end": "2027-01-02",
+              "display": "1-2 January, 2027"
+            }
+          ]
+        },
+        {
+          "title": "Christmas",
+          "note": "",
+          "dates": [
+            {
+              "start": "2027-01-07",
+              "end": "2027-01-07",
+              "display": "Thursday, January 7, 2027"
+            }
+          ]
+        },
+        {
+          "title": "Women's Day",
+          "note": "(Make-up classes are required for Monday classes scheduled on March 8, 2027.)",
+          "dates": [
+            {
+              "start": "2027-03-08",
+              "end": "2027-03-08",
+              "display": "Monday, March 8, 2027"
+            }
+          ]
+        },
+        {
+          "title": "Constitutional Day",
+          "note": "(Make-up classes are required for Monday classes scheduled on March 15, 2027.)",
+          "dates": [
+            {
+              "start": "2027-03-15",
+              "end": "2027-03-15",
+              "display": "Monday, March 15, 2027"
+            }
+          ]
+        },
+        {
+          "title": "Nauryz Day",
+          "note": "(Make-up classes are required for Monday classes scheduled on March 22, 2027.)",
+          "dates": [
+            {
+              "start": "2027-03-21",
+              "end": "2027-03-25",
+              "display": "21-25 March, 2027"
+            }
+          ]
+        },
+        {
+          "title": "International Labor Day",
+          "note": "(Make-up classes are required for Saturday classes scheduled on May 1, 2027.)",
+          "dates": [
+            {
+              "start": "2027-05-01",
+              "end": "2027-05-01",
+              "display": "Saturday, May 1, 2027"
+            }
+          ]
+        },
+        {
+          "title": "Defenders of the Fatherland Day",
+          "note": "",
+          "dates": [
+            {
+              "start": "2027-05-07",
+              "end": "2027-05-07",
+              "display": "Friday, May 7, 2027"
+            }
+          ]
+        },
+        {
+          "title": "Victory Day",
+          "note": "",
+          "dates": [
+            {
+              "start": "2027-05-09",
+              "end": "2027-05-09",
+              "display": "Sunday, May 9, 2027"
+            }
+          ]
+        },
+        {
+          "title": "Capital Day",
+          "note": "NO Make ups required",
+          "dates": [
+            {
+              "start": "2027-07-06",
+              "end": "2027-07-06",
+              "display": "Tuesday, July 6, 2027"
+            }
+          ]
+        },
+        {
+          "title": "Kurban Ait",
+          "note": "",
+          "dates": [
+            {
+              "start": "2027-05-16",
+              "end": "2027-05-16",
+              "display": "Sunday, May 16, 2027"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2025-2026",
+      "title": "Academic Calendar 2025-2026",
+      "semesters": [
+        {
+          "id": "F",
+          "name": "Fall 2025",
+          "events": [
+            {
+              "title": "Advising starts",
+              "start": "2025-06-16",
+              "end": "2025-06-16",
+              "display": "Monday, June 16, 2025"
+            },
+            {
+              "title": "Registration for 4th year undergraduate students, Honored students, students with special needs, freshmen students, all Master and Doctor students begins (1/3 payment + Student and annual Medical Fees are required prior to registration for Fall and Spring semesters and 100% payment for summer semesters)",
+              "start": "2025-07-14",
+              "end": "2025-07-14",
+              "display": "Monday, July 14, 2025"
+            },
+            {
+              "title": "Registration for 3d year Undergraduate students begins (1/3 payment + Student and annual Medical Fees are required prior to registration for Fall and Spring semesters and 100% payment for summer semesters) *Freshmen with 0 GPA for Spring Semester only",
+              "start": "2025-07-17",
+              "end": "2025-07-17",
+              "display": "Thursday, July 17, 2025"
+            },
+            {
+              "title": "Registration for 2nd year Undergraduate students begins (1/3 payment + Student and annual Medical Fees are required prior to registration for Fall and Spring semesters and 100% payment for summer semesters)",
+              "start": "2025-07-21",
+              "end": "2025-07-21",
+              "display": "Monday, July 21, 2025"
+            },
+            {
+              "title": "Registration for 1st year Undergraduate and Non degree students upon submission of original doc certifying high school/higher education begins (1/3 payment + Student and annual Medical Fees are required prior to registration for Fall and Spring semesters and 100% payment for summer semesters)",
+              "start": "2025-07-24",
+              "end": "2025-07-24",
+              "display": "Thursday, July 24, 2025"
+            },
+            {
+              "title": "Registration for non-degree students (who did not submit Authentic documents) begins (100% payment for all courses + Student Fee is required)",
+              "start": "2025-08-04",
+              "end": "2025-08-04",
+              "display": "Monday, August 4, 2025"
+            },
+            {
+              "title": "Registration ends",
+              "start": "2025-08-19",
+              "end": "2025-08-19",
+              "display": "Tuesday, August 19, 2025"
+            },
+            {
+              "title": "Semester starts with Orientation sessions for freshmen",
+              "start": "2025-08-18",
+              "end": "2025-08-19",
+              "display": "08/18/2025 - 8/19/2025"
+            },
+            {
+              "title": "Classes start",
+              "start": "2025-08-20",
+              "end": "2025-08-20",
+              "display": "Wednesday, August 20, 2025"
+            },
+            {
+              "title": "Internship start",
+              "start": "2025-08-20",
+              "end": "2025-08-20",
+              "display": "Wednesday, August 20, 2025"
+            },
+            {
+              "title": "Add/Drop period",
+              "start": "2025-08-20",
+              "end": "2025-08-26",
+              "display": "08/20/2025 - 8/26/2025"
+            },
+            {
+              "title": "Late Registration period for all students (need Instructors' approval)",
+              "start": "2025-08-27",
+              "end": "2025-09-02",
+              "display": "08/27/2025 - 09/2/2025"
+            },
+            {
+              "title": "Withdraw from a Course with 80% Tuition Refund with a \"W\" grade (online)",
+              "start": "2025-08-27",
+              "end": "2025-09-02",
+              "display": "08/27/2025 - 09/2/2025"
+            },
+            {
+              "title": "Withdraw from a Course with 60% Tuition Refund with a \"W\" grade (online)",
+              "start": "2025-09-03",
+              "end": "2025-09-09",
+              "display": "09/3/2025 - 09/9/2025"
+            },
+            {
+              "title": "Withdraw from a Course with 40% Tuition Refund with a \"W\" grade (online)",
+              "start": "2025-09-10",
+              "end": "2025-09-16",
+              "display": "09/10/2025 - 09/16/2025"
+            },
+            {
+              "title": "Withdraw from a Course with 20% Tuition Refund with a \"W\" grade (online)",
+              "start": "2025-09-17",
+              "end": "2025-09-23",
+              "display": "9/17/2025 - 09/23/2025"
+            },
+            {
+              "title": "Second Payment Deadline - Friday of 5th week (second 1/3 of total tuition is due)",
+              "start": "2025-09-19",
+              "end": "2025-09-19",
+              "display": "Friday, September 19, 2025"
+            },
+            {
+              "title": "From this date there are no refunds for withdrawals from courses with a \"W\" grade (online)",
+              "start": "2025-09-24",
+              "end": "2025-09-24",
+              "display": "Wednesday, September 24, 2025"
+            },
+            {
+              "title": "First Progress Submission period",
+              "start": "2025-09-29",
+              "end": "2025-10-06",
+              "display": "9/29/2025 - 10/6/2025"
+            },
+            {
+              "title": "\"I\" grades from previous semester convert into \"F\"s (7'th week of classes)",
+              "start": "2025-09-29",
+              "end": "2025-10-06",
+              "display": "9/29/2025 - 10/6/2025"
+            },
+            {
+              "title": "Study Break",
+              "start": "2025-10-06",
+              "end": "2025-10-12",
+              "display": "10/6/2025 - 10/12/2025"
+            },
+            {
+              "title": "Third Payment Deadline - Friday 9'th week (final 1/3 of total tuition is due)",
+              "start": "2025-10-17",
+              "end": "2025-10-17",
+              "display": "Friday, October 17, 2025"
+            },
+            {
+              "title": "Second Progress Submission period",
+              "start": "2025-11-10",
+              "end": "2025-11-17",
+              "display": "11/10/2025 - 11/17/2025"
+            },
+            {
+              "title": "Administrative Withdrawal from courses of students with overdue tuition balance (Friday 13'th week)",
+              "start": "2025-11-14",
+              "end": "2025-11-14",
+              "display": "Friday, November 14, 2025"
+            },
+            {
+              "title": "Last day to reinstate after Administrative withdraw from courses due to the tuition balanse overdue (Friday 15'th week)",
+              "start": "2025-11-28",
+              "end": "2025-11-28",
+              "display": "Friday, November 28, 2025"
+            },
+            {
+              "title": "Last Day to Withdraw from a Courses with a \"W\" grade (online)",
+              "start": "2025-12-10",
+              "end": "2025-12-10",
+              "display": "Wednesday, December 10, 2025"
+            },
+            {
+              "title": "Internship ends",
+              "start": "2025-12-10",
+              "end": "2025-12-10",
+              "display": "Wednesday, December 10, 2025"
+            },
+            {
+              "title": "Classes End",
+              "start": "2025-12-10",
+              "end": "2025-12-10",
+              "display": "Wednesday, December 10, 2025"
+            },
+            {
+              "title": "Final Assessments Starts, Examination Period and Final Attestation",
+              "start": "2025-12-11",
+              "end": "2025-12-21",
+              "display": "11 -15 and 17-21 December 2025"
+            },
+            {
+              "title": "Semester Ends",
+              "start": "2025-12-21",
+              "end": "2025-12-21",
+              "display": "Sunday, December 21, 2025"
+            },
+            {
+              "title": "Change Grade Forms due (2 weeks after semester ends, for Fall - 1st week of Spring classes)",
+              "start": "2026-01-15",
+              "end": "2026-01-15",
+              "display": "Thursday, January 15, 2026"
+            }
+          ]
+        },
+        {
+          "id": "S",
+          "name": "Spring 2026",
+          "events": [
+            {
+              "title": "Advising starts",
+              "start": "2025-11-03",
+              "end": "2025-11-03",
+              "display": "Monday, November 3, 2025"
+            },
+            {
+              "title": "Registration for 4th year undergraduate students, Honored students, students with special needs, freshmen students, all Master and Doctor students begins (1/3 payment + Student and annual Medical Fees are required prior to registration for Fall and Spring semesters and 100% payment for summer semesters)",
+              "start": "2025-11-24",
+              "end": "2025-11-24",
+              "display": "Monday, November 24, 2025"
+            },
+            {
+              "title": "Registration for 3d year Undergraduate students begins (1/3 payment + Student and annual Medical Fees are required prior to registration for Fall and Spring semesters and 100% payment for summer semesters) *Freshmen with 0 GPA for Spring Semester only",
+              "start": "2025-11-27",
+              "end": "2025-11-27",
+              "display": "Thursday, November 27, 2025"
+            },
+            {
+              "title": "Registration for 2nd year Undergraduate students begins (1/3 payment + Student and annual Medical Fees are required prior to registration for Fall and Spring semesters and 100% payment for summer semesters)",
+              "start": "2025-12-01",
+              "end": "2025-12-01",
+              "display": "Monday, December 1, 2025"
+            },
+            {
+              "title": "Registration for 1st year Undergraduate and Non degree students upon submission of original doc certifying high school/higher education begins (1/3 payment + Student and annual Medical Fees are required prior to registration for Fall and Spring semesters and 100% payment for summer semesters)",
+              "start": "2025-12-04",
+              "end": "2025-12-04",
+              "display": "Thursday, December 4, 2025"
+            },
+            {
+              "title": "Registration for non-degree students (who did not submit Authentic documents) begins (100% payment for all courses + Student Fee is required)",
+              "start": "2025-12-22",
+              "end": "2025-12-22",
+              "display": "Monday, December 22, 2025"
+            },
+            {
+              "title": "Registration ends",
+              "start": "2026-01-08",
+              "end": "2026-01-08",
+              "display": "Thursday, January 8, 2026"
+            },
+            {
+              "title": "Semester starts with Orientation sessions for freshmen",
+              "start": "2026-01-10",
+              "end": "2026-01-10",
+              "display": "Saturday, January 10, 2026"
+            },
+            {
+              "title": "Classes start",
+              "start": "2026-01-09",
+              "end": "2026-01-09",
+              "display": "Friday, January 9, 2026"
+            },
+            {
+              "title": "Internship start",
+              "start": "2026-01-09",
+              "end": "2026-01-09",
+              "display": "Friday, January 9, 2026"
+            },
+            {
+              "title": "Add/Drop period",
+              "start": "2026-01-09",
+              "end": "2026-01-15",
+              "display": "01/9/2026 - 01/15/2026"
+            },
+            {
+              "title": "Late Registration period for all students (need Instructors' approval)",
+              "start": "2026-01-16",
+              "end": "2026-01-22",
+              "display": "01/16/2026 - 01/22/2026"
+            },
+            {
+              "title": "Withdraw from a Course with 80% Tuition Refund with a \"W\" grade (online)",
+              "start": "2026-01-16",
+              "end": "2026-01-22",
+              "display": "01/16/2026 - 01/22/2026"
+            },
+            {
+              "title": "Withdraw from a Course with 60% Tuition Refund with a \"W\" grade (online)",
+              "start": "2026-01-23",
+              "end": "2026-01-29",
+              "display": "01/23/2026 - 01/29/2026"
+            },
+            {
+              "title": "Withdraw from a Course with 40% Tuition Refund with a \"W\" grade (online)",
+              "start": "2026-01-30",
+              "end": "2026-02-05",
+              "display": "01/30/2026 - 02/5/2026"
+            },
+            {
+              "title": "Withdraw from a Course with 20% Tuition Refund with a \"W\" grade (online)",
+              "start": "2026-02-06",
+              "end": "2026-02-12",
+              "display": "02/6/2026 - 02/12/2026"
+            },
+            {
+              "title": "Second Payment Deadline - Friday of 5th week (second 1/3 of total tuition is due)",
+              "start": "2026-02-06",
+              "end": "2026-02-06",
+              "display": "Friday, February 6, 2026"
+            },
+            {
+              "title": "From this date there are no refunds for withdrawals from courses with a \"W\" grade (online)",
+              "start": "2026-02-13",
+              "end": "2026-02-13",
+              "display": "Friday, February 13, 2026"
+            },
+            {
+              "title": "First Progress Submission period",
+              "start": "2026-02-16",
+              "end": "2026-02-23",
+              "display": "02/16/2026 - 02/23/2026"
+            },
+            {
+              "title": "\"I\" grades from previous semester convert into \"F\"s (7'th week of classes)",
+              "start": "2026-02-16",
+              "end": "2026-02-23",
+              "display": "02/16/2026 - 02/23/2026"
+            },
+            {
+              "title": "Study Break",
+              "start": "2026-02-23",
+              "end": "2026-03-01",
+              "display": "02/23/2026 - 03/1/2026"
+            },
+            {
+              "title": "Third Payment Deadline - Friday 9'th week (final 1/3 of total tuition is due)",
+              "start": "2026-03-06",
+              "end": "2026-03-06",
+              "display": "Friday, March 6, 2026"
+            },
+            {
+              "title": "Second Progress Submission period",
+              "start": "2026-03-30",
+              "end": "2026-04-06",
+              "display": "03/30/2026 - 04/6/2026"
+            },
+            {
+              "title": "Administrative Withdrawal from courses of students with overdue tuition balance (Friday 13'th week)",
+              "start": "2026-04-03",
+              "end": "2026-04-03",
+              "display": "Friday, April 3, 2026"
+            },
+            {
+              "title": "Last day to reinstate after Administrative withdraw from courses due to the tuition balanse overdue (Friday 15'th week)",
+              "start": "2026-04-17",
+              "end": "2026-04-17",
+              "display": "Friday, April 17, 2026"
+            },
+            {
+              "title": "Last Day to Withdraw from a Courses with a \"W\" grade (online)",
+              "start": "2026-05-06",
+              "end": "2026-05-06",
+              "display": "Wednesday, May 6, 2026"
+            },
+            {
+              "title": "Internship ends",
+              "start": "2026-05-06",
+              "end": "2026-05-06",
+              "display": "Wednesday, May 6, 2026"
+            },
+            {
+              "title": "Classes End",
+              "start": "2026-05-06",
+              "end": "2026-05-06",
+              "display": "Wednesday, May 6, 2026"
+            },
+            {
+              "title": "Final Assessments Starts, Examination Period and Final Attestation",
+              "start": "2026-05-08",
+              "end": "2026-05-17",
+              "display": "May 8,10-17, 2026"
+            },
+            {
+              "title": "Semester Ends",
+              "start": "2026-05-17",
+              "end": "2026-05-17",
+              "display": "Sunday, May 17, 2026"
+            },
+            {
+              "title": "Change Grade Forms due (2 weeks after semester ends, for Fall - 1st week of Spring classes)",
+              "start": "2026-06-01",
+              "end": "2026-06-01",
+              "display": "Monday, June 1, 2026"
+            },
+            {
+              "title": "Graduation Ceremony",
+              "start": "2026-05-23",
+              "end": "2026-05-23",
+              "display": "Saturday, May 23, 2026"
+            }
+          ]
+        },
+        {
+          "id": "SU1",
+          "name": "Summer 1 2026",
+          "events": [
+            {
+              "title": "Advising starts",
+              "start": "2026-03-30",
+              "end": "2026-03-30",
+              "display": "Monday, March 30, 2026"
+            },
+            {
+              "title": "Registration for 4th year undergraduate students, Honored students, students with special needs, freshmen students, all Master and Doctor students begins (1/3 payment + Student and annual Medical Fees are required prior to registration for Fall and Spring semesters and 100% payment for summer semesters)",
+              "start": "2026-04-20",
+              "end": "2026-04-20",
+              "display": "Monday, April 20, 2026"
+            },
+            {
+              "title": "Registration for 3d year Undergraduate students begins (1/3 payment + Student and annual Medical Fees are required prior to registration for Fall and Spring semesters and 100% payment for summer semesters) *Freshmen with 0 GPA for Spring Semester only",
+              "start": "2026-04-23",
+              "end": "2026-04-23",
+              "display": "Thursday, April 23, 2026"
+            },
+            {
+              "title": "Registration for 2nd year Undergraduate students begins (1/3 payment + Student and annual Medical Fees are required prior to registration for Fall and Spring semesters and 100% payment for summer semesters)",
+              "start": "2026-04-27",
+              "end": "2026-04-27",
+              "display": "Monday, April 27, 2026"
+            },
+            {
+              "title": "Registration for 1st year Undergraduate and Non degree students upon submission of original doc certifying high school/higher education begins (1/3 payment + Student and annual Medical Fees are required prior to registration for Fall and Spring semesters and 100% payment for summer semesters)",
+              "start": "2026-04-30",
+              "end": "2026-04-30",
+              "display": "Thursday, April 30, 2026"
+            },
+            {
+              "title": "Registration for non-degree students (who did not submit Authentic documents) begins (100% payment for all courses + Student Fee is required)",
+              "start": "2026-05-11",
+              "end": "2026-05-11",
+              "display": "Monday, May 11, 2026"
+            },
+            {
+              "title": "Registration ends",
+              "start": "2026-05-24",
+              "end": "2026-05-24",
+              "display": "Sunday, May 24, 2026"
+            },
+            {
+              "title": "Classes start",
+              "start": "2026-05-25",
+              "end": "2026-05-25",
+              "display": "Monday, May 25, 2026"
+            },
+            {
+              "title": "Internship start",
+              "start": "2026-05-25",
+              "end": "2026-05-25",
+              "display": "Monday, May 25, 2026"
+            },
+            {
+              "title": "Add/Drop period",
+              "start": "2026-05-25",
+              "end": "2026-05-26",
+              "display": "05/25/2026 - 05/26/2026"
+            },
+            {
+              "title": "Late Registration period for all students (need Instructors' approval)",
+              "start": "2026-05-27",
+              "end": "2026-05-28",
+              "display": "05/27/2026 - 05/28/2026"
+            },
+            {
+              "title": "First Progress Submission period",
+              "start": "2026-06-15",
+              "end": "2026-06-22",
+              "display": "6/15/2026 - 6/22/2026"
+            },
+            {
+              "title": "Last Day to Withdraw from a Courses with a \"W\" grade (online)",
+              "start": "2026-07-03",
+              "end": "2026-07-03",
+              "display": "Friday, July 3, 2026"
+            },
+            {
+              "title": "Internship ends",
+              "start": "2026-07-03",
+              "end": "2026-07-03",
+              "display": "Friday, July 3, 2026"
+            },
+            {
+              "title": "Classes End",
+              "start": "2026-07-03",
+              "end": "2026-07-03",
+              "display": "Friday, July 3, 2026"
+            },
+            {
+              "title": "Final Assessments Starts, Examination Period and Final Attestation",
+              "start": "2026-07-03",
+              "end": "2026-07-03",
+              "display": "Friday, July 3, 2026"
+            },
+            {
+              "title": "Semester Ends",
+              "start": "2026-07-03",
+              "end": "2026-07-03",
+              "display": "Friday, July 3, 2026"
+            },
+            {
+              "title": "Change Grade Forms due (2 weeks after semester ends, for Fall - 1st week of Spring classes)",
+              "start": "2026-07-17",
+              "end": "2026-07-17",
+              "display": "Friday, July 17, 2026"
+            }
+          ]
+        },
+        {
+          "id": "SU2",
+          "name": "Summer 2 2026",
+          "events": [
+            {
+              "title": "Advising starts",
+              "start": "2026-03-30",
+              "end": "2026-03-30",
+              "display": "Monday, March 30, 2026"
+            },
+            {
+              "title": "Registration for 4th year undergraduate students, Honored students, students with special needs, freshmen students, all Master and Doctor students begins (1/3 payment + Student and annual Medical Fees are required prior to registration for Fall and Spring semesters and 100% payment for summer semesters)",
+              "start": "2026-04-20",
+              "end": "2026-04-20",
+              "display": "Monday, April 20, 2026"
+            },
+            {
+              "title": "Registration for 3d year Undergraduate students begins (1/3 payment + Student and annual Medical Fees are required prior to registration for Fall and Spring semesters and 100% payment for summer semesters) *Freshmen with 0 GPA for Spring Semester only",
+              "start": "2026-04-23",
+              "end": "2026-04-23",
+              "display": "Thursday, April 23, 2026"
+            },
+            {
+              "title": "Registration for 2nd year Undergraduate students begins (1/3 payment + Student and annual Medical Fees are required prior to registration for Fall and Spring semesters and 100% payment for summer semesters)",
+              "start": "2026-04-27",
+              "end": "2026-04-27",
+              "display": "Monday, April 27, 2026"
+            },
+            {
+              "title": "Registration for 1st year Undergraduate and Non degree students upon submission of original doc certifying high school/higher education begins (1/3 payment + Student and annual Medical Fees are required prior to registration for Fall and Spring semesters and 100% payment for summer semesters)",
+              "start": "2026-04-30",
+              "end": "2026-04-30",
+              "display": "Thursday, April 30, 2026"
+            },
+            {
+              "title": "Registration for non-degree students (who did not submit Authentic documents) begins (100% payment for all courses + Student Fee is required)",
+              "start": "2026-05-11",
+              "end": "2026-05-11",
+              "display": "Monday, May 11, 2026"
+            },
+            {
+              "title": "Registration ends",
+              "start": "2026-07-12",
+              "end": "2026-07-12",
+              "display": "Sunday, July 12, 2026"
+            },
+            {
+              "title": "Classes start",
+              "start": "2026-07-13",
+              "end": "2026-07-13",
+              "display": "Monday, July 13, 2026"
+            },
+            {
+              "title": "Internship start",
+              "start": "2026-07-13",
+              "end": "2026-07-13",
+              "display": "Monday, July 13, 2026"
+            },
+            {
+              "title": "Add/Drop period",
+              "start": "2026-07-13",
+              "end": "2026-07-14",
+              "display": "07/13/2026 - 07/14/2026"
+            },
+            {
+              "title": "Last Day to Withdraw from a Courses with a \"W\" grade (online)",
+              "start": "2026-07-31",
+              "end": "2026-07-31",
+              "display": "Friday, July 31, 2026"
+            },
+            {
+              "title": "Internship ends",
+              "start": "2026-07-31",
+              "end": "2026-07-31",
+              "display": "Friday, July 31, 2026"
+            },
+            {
+              "title": "Classes End",
+              "start": "2026-07-31",
+              "end": "2026-07-31",
+              "display": "Friday, July 31, 2026"
+            },
+            {
+              "title": "Final Assessments Starts, Examination Period and Final Attestation",
+              "start": "2026-07-31",
+              "end": "2026-07-31",
+              "display": "Friday, July 31, 2026"
+            },
+            {
+              "title": "Semester Ends",
+              "start": "2026-07-31",
+              "end": "2026-07-31",
+              "display": "Friday, July 31, 2026"
+            },
+            {
+              "title": "Change Grade Forms due (2 weeks after semester ends, for Fall - 1st week of Spring classes)",
+              "start": "2026-08-14",
+              "end": "2026-08-14",
+              "display": "Friday, August 14, 2026"
+            }
+          ]
+        }
+      ],
+      "closed": [
+        {
+          "title": "Republic Day",
+          "note": "(make-up is required for Saturday class on October 25, 2025)",
+          "dates": [
+            {
+              "start": "2025-10-25",
+              "end": "2025-10-25",
+              "display": "Saturday, October 25, 2025"
+            }
+          ]
+        },
+        {
+          "title": "Independence Day",
+          "note": "",
+          "dates": [
+            {
+              "start": "2025-12-16",
+              "end": "2025-12-16",
+              "display": "Tuesday, December 16, 2025"
+            }
+          ]
+        },
+        {
+          "title": "New Year's Day",
+          "note": "",
+          "dates": [
+            {
+              "start": "2026-01-01",
+              "end": "2026-01-02",
+              "display": "1-2 January, 2026"
+            }
+          ]
+        },
+        {
+          "title": "Christmas",
+          "note": "",
+          "dates": [
+            {
+              "start": "2026-01-07",
+              "end": "2026-01-07",
+              "display": "Wednesday, January 7, 2026"
+            }
+          ]
+        },
+        {
+          "title": "Women's Day",
+          "note": "(make up is required for Monday classes March 9, 2026)",
+          "dates": [
+            {
+              "start": "2026-03-08",
+              "end": "2026-03-08",
+              "display": "Sunday, March 8, 2026"
+            }
+          ]
+        },
+        {
+          "title": "Nauryz Day",
+          "note": "(No make-ups are required for Tuesday and Wednesday classes on March 24-25, 2026)",
+          "dates": [
+            {
+              "start": "2026-03-21",
+              "end": "2026-03-25",
+              "display": "21-25 March, 2026"
+            }
+          ]
+        },
+        {
+          "title": "International Labor Day",
+          "note": "",
+          "dates": [
+            {
+              "start": "2026-05-01",
+              "end": "2026-05-01",
+              "display": "Friday, May 1, 2026"
+            }
+          ]
+        },
+        {
+          "title": "Defenders of the Fatherland Day",
+          "note": "",
+          "dates": [
+            {
+              "start": "2026-05-07",
+              "end": "2026-05-07",
+              "display": "Thursday, May 7, 2026"
+            }
+          ]
+        },
+        {
+          "title": "Victory Day",
+          "note": "",
+          "dates": [
+            {
+              "start": "2026-05-09",
+              "end": "2026-05-09",
+              "display": "Saturday, May 9, 2026"
+            }
+          ]
+        },
+        {
+          "title": "Capital Day",
+          "note": "",
+          "dates": [
+            {
+              "start": "2026-07-06",
+              "end": "2026-07-06",
+              "display": "Monday, July 6, 2026"
+            }
+          ]
+        },
+        {
+          "title": "Kurban Ait",
+          "note": "(make up is required for Wednesday classes May 27, 2026)",
+          "dates": [
+            {
+              "start": "2026-05-27",
+              "end": "2026-05-27",
+              "display": "Wednesday, May 27, 2026"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

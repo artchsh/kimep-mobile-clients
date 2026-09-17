@@ -1,0 +1,32 @@
+# ---- Android / Gradle build output ----
+kimep-android/.gradle/
+kimep-android/build/
+kimep-android/app/build/
+kimep-android/.kotlin/
+kimep-android/local.properties
+kimep-android/.idea/
+kimep-android/*.iml
+*.apk
+*.aab
+
+# ---- Signing secrets — NEVER commit ----
+kimep-android/keystore.properties
+kimep-android/keystore/
+*.jks
+*.keystore
+*.p12
+
+# ---- Captured traffic & personal data ----
+captures/
+proxy.out
+proxy443.out
+proxy_test.out
+.mark
+.mark_login
+
+# ---- Calendar source PDFs (auto-downloaded by tools/parse_calendar.py) ----
+calendar/*.pdf
+calendar/out.xml
+
+# ---- macOS ----
+.DS_Store

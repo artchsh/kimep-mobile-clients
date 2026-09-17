@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">KIMEP</string>
+    <string name="login_title">KIMEP Mobile</string>
+    <string name="login_subtitle">Sign in with your KIMEP account</string>
+    <string name="student_id">Student ID</string>
+    <string name="password">Password</string>
+    <string name="sign_in">Sign in</string>
+    <string name="schedule">Schedule</string>
+    <string name="grades">Grades</string>
+    <string name="profile">Profile</string>
+    <string name="sign_out">Sign out</string>
+    <string name="retry">Retry</string>
+</resources>
