@@ -8,6 +8,8 @@ import androidx.lifecycle.viewModelScope
 import androidx.lifecycle.viewmodel.initializer
 import androidx.lifecycle.viewmodel.viewModelFactory
 import kz.kimep.mobile.data.KimepRepository
+import kz.kimep.mobile.data.analytics.Analytics
+import kz.kimep.mobile.data.analytics.AnalyticsEvents
 import kz.kimep.mobile.data.friendlyMessage
 import kotlinx.coroutines.launch
 
@@ -16,7 +18,10 @@ data class LoginUiState(
     val error: String? = null,
 )
 
-class LoginViewModel(private val repository: KimepRepository) : ViewModel() {
+class LoginViewModel(
+    private val repository: KimepRepository,
+    private val analytics: Analytics,
+) : ViewModel() {
 
     var uiState by mutableStateOf(LoginUiState())
         private set
@@ -29,13 +34,19 @@ class LoginViewModel(private val repository: KimepRepository) : ViewModel() {
         viewModelScope.launch {
             uiState = LoginUiState(loading = true)
             repository.login(studentId, password)
-                .onFailure { uiState = LoginUiState(error = it.friendlyMessage()) }
+                .onSuccess {
+                    analytics.track(AnalyticsEvents.LOGIN, mapOf("result" to "success"))
+                }
+                .onFailure {
+                    analytics.track(AnalyticsEvents.LOGIN, mapOf("result" to "failure"))
+                    uiState = LoginUiState(error = it.friendlyMessage())
+                }
         }
     }
 
     companion object {
-        fun factory(repository: KimepRepository) = viewModelFactory {
-            initializer { LoginViewModel(repository) }
+        fun factory(repository: KimepRepository, analytics: Analytics) = viewModelFactory {
+            initializer { LoginViewModel(repository, analytics) }
         }
     }
 }

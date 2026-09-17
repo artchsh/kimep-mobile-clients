@@ -5,9 +5,9 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.automirrored.filled.EventNote
 import androidx.compose.material.icons.filled.Assessment
 import androidx.compose.material.icons.filled.CalendarMonth
-import androidx.compose.material.icons.automirrored.filled.EventNote
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material3.CenterAlignedTopAppBar
@@ -21,6 +21,7 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
@@ -33,9 +34,11 @@ import kz.kimep.mobile.data.KimepRepository
 import kz.kimep.mobile.data.ScheduleCache
 import kz.kimep.mobile.data.SessionState
 import kz.kimep.mobile.data.SettingsStore
+import kz.kimep.mobile.data.analytics.Analytics
+import kz.kimep.mobile.data.analytics.AnalyticsStore
 import kz.kimep.mobile.data.notify.ReminderManager
 
-private data class Destination(val label: String, val icon: ImageVector)
+private data class Destination(val label: String, val icon: ImageVector, val eventName: String)
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -46,17 +49,24 @@ fun MainScreen(
     scheduleCache: ScheduleCache,
     settingsStore: SettingsStore,
     reminderManager: ReminderManager,
+    analyticsStore: AnalyticsStore,
+    analytics: Analytics,
+    analyticsEnabled: Boolean,
     onLogout: () -> Unit,
 ) {
     val destinations = listOf(
-        Destination("Schedule", Icons.Filled.CalendarMonth),
-        Destination("Grades", Icons.Filled.Assessment),
-        Destination("Calendar", Icons.AutoMirrored.Filled.EventNote),
-        Destination("Profile", Icons.Filled.Person),
+        Destination("Schedule", Icons.Filled.CalendarMonth, "schedule"),
+        Destination("Grades", Icons.Filled.Assessment, "grades"),
+        Destination("Calendar", Icons.AutoMirrored.Filled.EventNote, "calendar"),
+        Destination("Profile", Icons.Filled.Person, "profile"),
     )
 
     var index by rememberSaveable { mutableIntStateOf(0) }
     var showSettings by rememberSaveable { mutableStateOf(false) }
+
+    LaunchedEffect(index, showSettings) {
+        analytics.screen(if (showSettings) "settings" else destinations[index].eventName)
+    }
 
     Scaffold(
         topBar = {
@@ -108,13 +118,41 @@ fun MainScreen(
                 .padding(innerPadding),
         ) {
             if (showSettings) {
-                SettingsScreen(settingsStore, reminderManager)
+                SettingsScreen(
+                    settingsStore = settingsStore,
+                    reminderManager = reminderManager,
+                    analyticsStore = analyticsStore,
+                    analytics = analytics,
+                    analyticsEnabled = analyticsEnabled,
+                )
             } else {
                 when (index) {
-                    0 -> ScheduleScreen(repository, scheduleCache, calendarRepository, reminderManager, session.id)
-                    1 -> GradesScreen(repository, session.id)
-                    2 -> CalendarScreen(calendarRepository)
-                    else -> ProfileScreen(session, repository, onLogout)
+                    0 -> ScheduleScreen(
+                        repository = repository,
+                        scheduleCache = scheduleCache,
+                        calendarRepository = calendarRepository,
+                        reminderManager = reminderManager,
+                        analytics = analytics,
+                        sessionId = session.id,
+                    )
+
+                    1 -> GradesScreen(
+                        repository = repository,
+                        analytics = analytics,
+                        sessionId = session.id,
+                    )
+
+                    2 -> CalendarScreen(
+                        repository = calendarRepository,
+                        analytics = analytics,
+                    )
+
+                    else -> ProfileScreen(
+                        session = session,
+                        repository = repository,
+                        analytics = analytics,
+                        onLogout = onLogout,
+                    )
                 }
             }
         }

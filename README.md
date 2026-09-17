@@ -44,6 +44,9 @@ calendar) with a native interface, offline caching and class reminders.
   **Next**, and past events dimmed. Opens scrolled to the current event.
 - **Reminders** — notifications **1 hour** and **10 minutes** before each class, plus a
   final‑exam reminder. Each is individually togglable.
+- **Optional, consent‑gated analytics** — anonymous usage events (screens, taps, retention)
+  sent to a Umami instance. Off by default, no personal data, no real URLs. See
+  **[docs/ANALYTICS.md](docs/ANALYTICS.md)**.
 - **Material You** dynamic colour, light/dark theme, edge‑to‑edge.
 
 ## Tech stack
@@ -70,6 +73,7 @@ docs/
   ARCHITECTURE.md       Android app architecture
   RELEASING.md          how to cut a release (CI signs automatically)
   DEVICE_SUPPORT.md     supported OS/ABIs/form factors and known limitations
+  ANALYTICS.md          opt-in anonymous analytics (Umami) and the consent flow
 tools/
   parse_calendar.py     KIMEP calendar PDF -> calendar.json
 capture.py              mitmproxy addon used during reverse engineering
@@ -148,6 +152,17 @@ academic year:
 ```bash
 python3 tools/parse_calendar.py     # needs poppler (pdftotext)
 ```
+
+## Privacy & analytics
+
+Analytics is **opt-in and disabled unless configured**. On first launch the app shows a
+plain‑language consent screen; nothing is sent before the user agrees, and it can be turned
+off any time in **Settings → Privacy**.
+
+It collects only anonymous usage events — which screens are opened, which controls are
+tapped, and a random on‑device ID used to measure retention. It never collects names,
+student IDs, passwords, sessions, grades, courses or any content you view, and it never
+sends real URLs. Full details and the event list: **[docs/ANALYTICS.md](docs/ANALYTICS.md)**.
 
 ## Disclaimer
 

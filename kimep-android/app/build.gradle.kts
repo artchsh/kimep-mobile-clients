@@ -14,6 +14,19 @@ val keystoreProps = Properties().apply {
     if (keystorePropsFile.exists()) keystorePropsFile.inputStream().use { load(it) }
 }
 
+// Analytics config is opt-in and never committed: set umami.host / umami.websiteId in
+// local.properties, or pass -Pumami.host=… / UMAMI_HOST env vars (CI uses secrets).
+// When empty, the app ships with analytics fully disabled (no network calls at all).
+val localProperties = Properties().apply {
+    val f = rootProject.file("local.properties")
+    if (f.exists()) f.inputStream().use { load(it) }
+}
+fun configValue(key: String, env: String): String =
+    localProperties.getProperty(key)
+        ?: (project.findProperty(key) as String?)
+        ?: System.getenv(env)
+        ?: ""
+
 android {
     namespace = "kz.kimep.mobile"
     compileSdk = 37
@@ -22,9 +35,16 @@ android {
         applicationId = "kz.kimep.mobile"
         minSdk = 26
         targetSdk = 37
-        versionCode = 1
-        versionName = "0.1-beta"
+        versionCode = 2
+        versionName = "0.2-beta"
         vectorDrawables { useSupportLibrary = true }
+
+        buildConfigField("String", "UMAMI_HOST", "\"${configValue("umami.host", "UMAMI_HOST")}\"")
+        buildConfigField(
+            "String",
+            "UMAMI_WEBSITE_ID",
+            "\"${configValue("umami.websiteId", "UMAMI_WEBSITE_ID")}\"",
+        )
     }
 
     signingConfigs {
@@ -61,6 +81,7 @@ android {
 
     buildFeatures {
         compose = true
+        buildConfig = true
     }
 
     packaging {

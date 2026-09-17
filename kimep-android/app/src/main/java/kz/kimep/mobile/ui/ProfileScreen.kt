@@ -47,6 +47,8 @@ import kz.kimep.mobile.data.ApiDate
 import kz.kimep.mobile.data.KimepApi
 import kz.kimep.mobile.data.KimepRepository
 import kz.kimep.mobile.data.SessionState
+import kz.kimep.mobile.data.analytics.Analytics
+import kz.kimep.mobile.data.analytics.AnalyticsEvents
 import kz.kimep.mobile.vm.ProfileViewModel
 import java.time.format.DateTimeFormatter
 
@@ -54,6 +56,7 @@ import java.time.format.DateTimeFormatter
 fun ProfileScreen(
     session: SessionState.LoggedIn,
     repository: KimepRepository,
+    analytics: Analytics,
     onLogout: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
@@ -114,7 +117,10 @@ fun ProfileScreen(
         Spacer(Modifier.height(24.dp))
 
         OutlinedButton(
-            onClick = onLogout,
+            onClick = {
+                analytics.track(AnalyticsEvents.LOGOUT)
+                onLogout()
+            },
             modifier = Modifier
                 .fillMaxWidth()
                 .height(50.dp),

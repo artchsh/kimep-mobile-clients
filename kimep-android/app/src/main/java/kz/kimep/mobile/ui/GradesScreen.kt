@@ -40,6 +40,8 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import kz.kimep.mobile.data.KimepRepository
+import kz.kimep.mobile.data.analytics.Analytics
+import kz.kimep.mobile.data.analytics.AnalyticsEvents
 import kz.kimep.mobile.data.model.AssessmentScore
 import kz.kimep.mobile.data.model.FinalGrade
 import kz.kimep.mobile.data.model.GpaCredits
@@ -50,6 +52,7 @@ import kz.kimep.mobile.vm.GradesViewModel
 @Composable
 fun GradesScreen(
     repository: KimepRepository,
+    analytics: Analytics,
     sessionId: String,
     modifier: Modifier = Modifier,
 ) {
@@ -75,12 +78,18 @@ fun GradesScreen(
             PrimaryTabRow(selectedTabIndex = tab) {
                 Tab(
                     selected = tab == 0,
-                    onClick = { tab = 0 },
+                    onClick = {
+                        tab = 0
+                        analytics.track(AnalyticsEvents.GRADES_TAB, mapOf("tab" to "current"))
+                    },
                     text = { Text("Current") },
                 )
                 Tab(
                     selected = tab == 1,
-                    onClick = { tab = 1 },
+                    onClick = {
+                        tab = 1
+                        analytics.track(AnalyticsEvents.GRADES_TAB, mapOf("tab" to "transcript"))
+                    },
                     text = { Text("Transcript") },
                 )
             }

@@ -54,6 +54,8 @@ import kz.kimep.mobile.data.ApiDate
 import kz.kimep.mobile.data.CalendarRepository
 import kz.kimep.mobile.data.KimepRepository
 import kz.kimep.mobile.data.ScheduleCache
+import kz.kimep.mobile.data.analytics.Analytics
+import kz.kimep.mobile.data.analytics.AnalyticsEvents
 import kz.kimep.mobile.data.model.ClassMeeting
 import kz.kimep.mobile.data.model.FinalExam
 import kz.kimep.mobile.data.notify.ReminderManager
@@ -90,6 +92,7 @@ fun ScheduleScreen(
     scheduleCache: ScheduleCache,
     calendarRepository: CalendarRepository,
     reminderManager: ReminderManager,
+    analytics: Analytics,
     sessionId: String,
     modifier: Modifier = Modifier,
 ) {
@@ -126,12 +129,18 @@ fun ScheduleScreen(
             ) {
                 FilterChip(
                     selected = !showFinals,
-                    onClick = { showFinals = false },
+                    onClick = {
+                        showFinals = false
+                        analytics.track(AnalyticsEvents.SCHEDULE_TAB, mapOf("tab" to "classes"))
+                    },
                     label = { Text("Classes") },
                 )
                 FilterChip(
                     selected = showFinals,
-                    onClick = { showFinals = true },
+                    onClick = {
+                        showFinals = true
+                        analytics.track(AnalyticsEvents.SCHEDULE_TAB, mapOf("tab" to "finals"))
+                    },
                     label = { Text("Finals") },
                 )
             }
@@ -142,7 +151,10 @@ fun ScheduleScreen(
                 state.midterm?.let { MidtermBanner(it) }
                 PullToRefreshBox(
                     isRefreshing = state.refreshing,
-                    onRefresh = { viewModel.load(refresh = true) },
+                    onRefresh = {
+                        analytics.track(AnalyticsEvents.SCHEDULE_REFRESH)
+                        viewModel.load(refresh = true)
+                    },
                     modifier = Modifier.fillMaxSize(),
                 ) {
                     if (state.meetings.isEmpty()) {

@@ -12,7 +12,6 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
@@ -23,6 +22,7 @@ import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.getValue
@@ -41,6 +41,9 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
 import kz.kimep.mobile.data.ReminderSettings
 import kz.kimep.mobile.data.SettingsStore
+import kz.kimep.mobile.data.analytics.Analytics
+import kz.kimep.mobile.data.analytics.AnalyticsStore
+import kz.kimep.mobile.data.analytics.ConsentState
 import kz.kimep.mobile.data.notify.ReminderManager
 import kz.kimep.mobile.vm.SettingsViewModel
 
@@ -48,12 +51,25 @@ import kz.kimep.mobile.vm.SettingsViewModel
 fun SettingsScreen(
     settingsStore: SettingsStore,
     reminderManager: ReminderManager,
+    analyticsStore: AnalyticsStore,
+    analytics: Analytics,
+    analyticsEnabled: Boolean,
     modifier: Modifier = Modifier,
 ) {
-    val viewModel: SettingsViewModel =
-        viewModel(factory = SettingsViewModel.factory(settingsStore, reminderManager))
+    val viewModel: SettingsViewModel = viewModel(
+        factory = SettingsViewModel.factory(
+            settingsStore,
+            reminderManager,
+            analyticsStore,
+            analytics,
+        ),
+    )
     val settings by viewModel.settings
         .collectAsStateWithLifecycle(initialValue = ReminderSettings())
+    val consent by viewModel.consent
+        .collectAsStateWithLifecycle(initialValue = ConsentState.Undecided)
+
+    var showNotice by remember { mutableStateOf(false) }
 
     Column(
         modifier = modifier
@@ -107,7 +123,43 @@ fun SettingsScreen(
             color = MaterialTheme.colorScheme.onSurfaceVariant,
             modifier = Modifier.padding(horizontal = 4.dp),
         )
+
+        if (analyticsEnabled) {
+            Spacer(Modifier.height(24.dp))
+            Text(
+                text = "Privacy",
+                style = MaterialTheme.typography.titleSmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                modifier = Modifier.padding(start = 4.dp, bottom = 8.dp),
+            )
+            Card(
+                shape = RoundedCornerShape(20.dp),
+                colors = CardDefaults.cardColors(
+                    containerColor = MaterialTheme.colorScheme.surfaceContainerLow,
+                ),
+            ) {
+                SettingSwitch(
+                    title = "Share anonymous statistics",
+                    subtitle = "Which screens you open and buttons you tap, tied to a " +
+                        "random device ID. No personal data, ever.",
+                    checked = consent == ConsentState.Granted,
+                    onCheckedChange = viewModel::setAnalyticsConsent,
+                )
+                HorizontalDivider(Modifier.padding(horizontal = 16.dp))
+                TextButton(
+                    onClick = { showNotice = true },
+                    modifier = Modifier.padding(horizontal = 8.dp),
+                ) {
+                    Text("Read the privacy notice")
+                }
+            }
+        }
+
         Spacer(Modifier.height(24.dp))
+    }
+
+    if (showNotice) {
+        PrivacyNoticeDialog(onDismiss = { showNotice = false })
     }
 }
 
@@ -187,7 +239,6 @@ private fun SettingSwitch(
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
             )
         }
-        Spacer(Modifier.height(0.dp))
         Switch(checked = checked, onCheckedChange = onCheckedChange)
     }
 }

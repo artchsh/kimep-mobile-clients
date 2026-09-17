@@ -62,10 +62,17 @@ jobs:
 
       - name: Build debug
         working-directory: kimep-android
+        env:
+          # Optional: leave unset to ship with analytics disabled.
+          UMAMI_HOST: ${{ secrets.UMAMI_HOST }}
+          UMAMI_WEBSITE_ID: ${{ secrets.UMAMI_WEBSITE_ID }}
         run: ./gradlew :app:assembleDebug --stacktrace
 
       - name: Build release
         working-directory: kimep-android
+        env:
+          UMAMI_HOST: ${{ secrets.UMAMI_HOST }}
+          UMAMI_WEBSITE_ID: ${{ secrets.UMAMI_WEBSITE_ID }}
         run: ./gradlew :app:assembleRelease --stacktrace
 
       - name: Verify release signature

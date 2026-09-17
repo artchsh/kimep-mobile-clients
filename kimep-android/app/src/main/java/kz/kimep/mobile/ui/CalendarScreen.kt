@@ -41,6 +41,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import kz.kimep.mobile.data.CalendarRepository
+import kz.kimep.mobile.data.analytics.Analytics
+import kz.kimep.mobile.data.analytics.AnalyticsEvents
 import kz.kimep.mobile.data.model.CalendarClosure
 import kz.kimep.mobile.data.model.CalendarEvent
 import kz.kimep.mobile.ui.components.LoadingState
@@ -51,6 +53,7 @@ import java.time.LocalDate
 @Composable
 fun CalendarScreen(
     repository: CalendarRepository,
+    analytics: Analytics,
     modifier: Modifier = Modifier,
 ) {
     val viewModel: CalendarViewModel = viewModel(factory = CalendarViewModel.factory(repository))
@@ -94,6 +97,10 @@ fun CalendarScreen(
                                 onClick = {
                                     yearIndex = index
                                     tabIndex = 0
+                                    analytics.track(
+                                        AnalyticsEvents.CALENDAR_FILTER,
+                                        mapOf("year" to y.id),
+                                    )
                                 },
                                 label = { Text(y.id) },
                             )
@@ -108,7 +115,13 @@ fun CalendarScreen(
                     tabTitles.forEachIndexed { index, title ->
                         Tab(
                             selected = tabIndex == index,
-                            onClick = { tabIndex = index },
+                            onClick = {
+                                tabIndex = index
+                                analytics.track(
+                                    AnalyticsEvents.CALENDAR_FILTER,
+                                    mapOf("year" to year.id, "semester" to title),
+                                )
+                            },
                             text = { Text(title) },
                         )
                     }
