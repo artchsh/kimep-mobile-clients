@@ -9,8 +9,11 @@ calendar) with a native interface, offline caching and class reminders.
 
 [![Release](https://img.shields.io/github/v/release/artchsh/kimep-mobile-clients?include_prereleases&label=release)](https://github.com/artchsh/kimep-mobile-clients/releases/latest)
 [![Android CI](https://github.com/artchsh/kimep-mobile-clients/actions/workflows/android.yml/badge.svg)](https://github.com/artchsh/kimep-mobile-clients/actions/workflows/android.yml)
+[![Website](https://img.shields.io/badge/website-download-1D4E89)](https://artchsh.github.io/kimep-mobile-clients/)
 
-**➡️ [Download the latest APK](https://github.com/artchsh/kimep-mobile-clients/releases/latest)**
+**➡️ [Download the latest APK](https://artchsh.github.io/kimep-mobile-clients/)** — a plain
+download page on GitHub Pages, or grab it straight from
+[Releases](https://github.com/artchsh/kimep-mobile-clients/releases).
 
 <p align="center">
   <img src="docs/screenshots/schedule.png" width="210" alt="Schedule" />
@@ -59,6 +62,7 @@ See **[docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)** for how the app is put toge
 ## Repository layout
 
 ```
+app-website/            download page (GitHub Pages: artchsh.github.io/kimep-mobile-clients)
 kimep-android/          Android app (Gradle project)
   app/src/main/java/kz/kimep/mobile/
     data/               models, API client, repositories, caches, notifications
@@ -79,7 +83,10 @@ tools/
 capture.py              mitmproxy addon used during reverse engineering
 dnsmasq.conf            DNS redirect used for the reverse-proxy phase
 ```
-> An `ios/` client is planned; the repository name reflects that.
+
+The download page is deployed by `.github/workflows/pages.yml`, which snapshots the latest
+releases into `releases.json` at deploy time and publishes `app-website/` to GitHub Pages.
+An `ios/` client is planned; the repository name reflects that.
 
 ## Building (Android)
 
