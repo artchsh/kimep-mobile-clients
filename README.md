@@ -8,6 +8,11 @@ It talks to the same `/ext/mobile` API and reproduces the useful parts — sched
 and the academic calendar — with a native Material 3 interface, offline caching and class
 reminders.
 
+[![Release](https://img.shields.io/github/v/release/artchsh/kimep-reverse?include_prereleases&label=release)](https://github.com/artchsh/kimep-reverse/releases/latest)
+[![Android CI](https://github.com/artchsh/kimep-reverse/actions/workflows/android.yml/badge.svg)](https://github.com/artchsh/kimep-reverse/actions/workflows/android.yml)
+
+**➡️ [Download the latest APK](https://github.com/artchsh/kimep-reverse/releases/latest)**
+
 <p align="center">
   <img src="docs/screenshots/schedule.png" width="210" alt="Schedule" />
   &nbsp;
