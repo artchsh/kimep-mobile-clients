@@ -5,9 +5,12 @@ import io.ktor.client.HttpClient
 import io.ktor.client.engine.okhttp.OkHttp
 import io.ktor.client.plugins.HttpTimeout
 import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
+import io.ktor.client.request.header
 import io.ktor.client.request.post
 import io.ktor.client.request.setBody
+import io.ktor.client.statement.bodyAsText
 import io.ktor.http.ContentType
+import io.ktor.http.HttpHeaders
 import io.ktor.http.contentType
 import io.ktor.serialization.kotlinx.json.json
 import kotlinx.coroutines.CoroutineScope
@@ -16,6 +19,8 @@ import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.launch
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.buildJsonObject
+import kotlinx.serialization.json.jsonObject
+import kotlinx.serialization.json.jsonPrimitive
 import kotlinx.serialization.json.put
 import kotlinx.serialization.json.putJsonObject
 import java.util.Locale
@@ -59,6 +64,12 @@ object NoOpAnalytics : Analytics {
  *  - sends a synthetic URL (`/app/<event>`) rather than any real URL, so the session GUID
  *    embedded in avatar URLs can never leak;
  *  - identifies the device only by a random local UUID plus install age.
+ *
+ * Umami requirements handled here:
+ *  - a valid `User-Agent` header is mandatory or the request is rejected;
+ *  - the `cache` token returned by the server is echoed back as `x-umami-cache` so the
+ *    events of one run are grouped into a single session (otherwise every event would
+ *    look like a new visit and retention/session metrics would be meaningless).
  */
 class UmamiAnalytics(
     private val host: String,
@@ -81,6 +92,11 @@ class UmamiAnalytics(
     }
 
     private val scope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
+
+    private val userAgent = "KIMEPMobile/$appVersion (Android)"
+
+    @Volatile
+    private var sessionCache: String? = null
 
     override fun track(event: String, data: Map<String, String>) {
         if (host.isBlank() || websiteId.isBlank()) return
@@ -110,9 +126,21 @@ class UmamiAnalytics(
                     put("payload", payload)
                 }
 
-                client.post(host.trimEnd('/') + "/api/send") {
+                val response = client.post(host.trimEnd('/') + "/api/send") {
                     contentType(ContentType.Application.Json)
+                    header(HttpHeaders.UserAgent, userAgent)
+                    sessionCache?.let { header("x-umami-cache", it) }
                     setBody(body)
+                }
+
+                // Carry the session token into the next event.
+                runCatching {
+                    response.bodyAsText()
+                        .let { Json.parseToJsonElement(it).jsonObject }
+                        .get("cache")
+                        ?.jsonPrimitive
+                        ?.content
+                        ?.let { sessionCache = it }
                 }
             }
         }
