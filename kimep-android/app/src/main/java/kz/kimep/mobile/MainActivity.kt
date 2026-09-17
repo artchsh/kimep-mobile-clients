@@ -9,19 +9,39 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import androidx.lifecycle.lifecycleScope
+import kz.kimep.mobile.data.analytics.ConsentState
 import kz.kimep.mobile.ui.KimepRoot
 import kz.kimep.mobile.ui.theme.KimepTheme
+import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.launch
 
 class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        requestNotificationPermission()
+        requestNotificationPermissionWhenReady()
         setContent {
             KimepTheme {
                 KimepRoot()
             }
+        }
+    }
+
+    /**
+     * Defer the system notification prompt until after the first-run analytics notice has
+     * been answered, so the two dialogs don't stack on a fresh install.
+     */
+    private fun requestNotificationPermissionWhenReady() {
+        lifecycleScope.launch {
+            val container = (application as KimepApp).container
+            if (container.analyticsEnabled) {
+                container.analyticsStore.consent.first {
+                    it != ConsentState.Loading && it != ConsentState.Undecided
+                }
+            }
+            requestNotificationPermission()
         }
     }
 

@@ -1,8 +1,9 @@
 # Analytics (Umami)
 
 The Android app can send **anonymous, privacy-conscious usage events** to a self-hosted
-or cloud **Umami** instance. It is **opt-in**, **off by default**, and does nothing at all
-until both a host is configured *and* the user accepts the consent screen.
+or cloud **Umami** instance. It does nothing at all until a host is configured at build
+time. When it is configured, tracking is **on by default with a one-tap opt-out** and a
+dismissible first-run notice.
 
 This is a proof of concept. The data is used purely for analytics — what is used, what is
 not, and whether people come back.
@@ -15,10 +16,10 @@ not, and whether people come back.
   GUID embedded in avatar URLs can never leak.
 - **No OS identifiers.** No advertising ID, no location, no contacts. The only identifier
   is a random UUID generated on the device.
-- **Consent-gated.** `Analytics.track()` checks consent on every call; before consent (or
-  after opting out) the event is dropped before any network call is made.
-- **Opt-out is immediate** and reachable any time in Settings → Privacy. Turning it off
-  also forgets the anonymous identifier.
+- **Opt-out.** `Analytics.track()` checks the decision on every call and drops the event
+  (before any network request) once the user has turned it off.
+- **Opt-out is immediate** and reachable from the first-run notice or any time in
+  Settings → Privacy. Turning it off also forgets the anonymous identifier.
 - **Best-effort.** Sends are fire-and-forget on a background scope; failures are ignored
   and never affect the UI.
 
@@ -120,17 +121,19 @@ Targets **Umami v2**. Two requirements from the docs are handled by the client:
 If you run an older Umami (v1 `POST /api/collect`), adjust the request body in
 `data/analytics/Analytics.kt` — it is built in one place.
 
-## Consent flow
+## Opt-out flow
 
-1. On first launch, before anything else, `PrivacyConsentScreen` is shown with the plain
-   language notice (collected / never collected / why / who sees it / your control).
-2. **Agree and continue** → consent is stored, tracking begins, `consent_decision` is sent.
-3. **Continue without sharing** → consent stored as denied; nothing is ever sent.
+1. On first launch a **dismissible dialog** explains what is collected and states that it
+   is on by default. It does not block the app.
+2. **Keep on** (or dismissing the dialog) records the decision — tracking was already on.
+3. **Turn off** records a denial and forgets any anonymous id; nothing is sent from then on.
 4. The decision can be changed any time in **Settings → Privacy**, which also lets the user
    re-read the notice.
+5. Declines cannot be measured: by design nothing is transmitted once tracking is off.
 
-Consent, the anonymous id and the first-seen timestamp live in a separate DataStore file
-(`kimep_analytics`).
+The decision, the anonymous id and the first-seen timestamp live in a separate DataStore
+file (`kimep_analytics`). While the decision is still `Undecided`, tracking is treated as
+enabled (that is what "default on" means); only an explicit denial stops it.
 
 ## Where it lives
 
@@ -140,4 +143,5 @@ Consent, the anonymous id and the first-seen timestamp live in a separate DataSt
 | `data/analytics/Analytics.kt` | `Analytics` interface, `NoOpAnalytics`, `UmamiAnalytics`, event names |
 | `ui/PrivacyConsent.kt` | consent screen + notice body/dialog |
 | `di/AppContainer.kt` | selects `NoOpAnalytics` vs `UmamiAnalytics` from `BuildConfig` |
-| `ui/KimepRoot.kt` | gates on consent, records `app_open` |
+| `ui/PrivacyConsent.kt` | first-run notice dialog + notice body |
+| `ui/KimepRoot.kt` | shows the first-run notice, records `app_open` |

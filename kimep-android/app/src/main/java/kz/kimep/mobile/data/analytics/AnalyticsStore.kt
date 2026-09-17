@@ -58,7 +58,11 @@ class AnalyticsStore(private val context: Context) {
         }
     }
 
-    suspend fun isTrackingEnabled(): Boolean = consent.first() == ConsentState.Granted
+    /**
+     * Opt-out model: tracking is on unless the user has explicitly denied it
+     * (including before they have responded to the first-run notice).
+     */
+    suspend fun isTrackingEnabled(): Boolean = consent.first() != ConsentState.Denied
 
     /** Random, device-local identifier. Created lazily; regenerated if identity was cleared. */
     suspend fun identity(): AnonymousIdentity {

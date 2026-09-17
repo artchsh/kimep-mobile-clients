@@ -6,7 +6,10 @@ import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
@@ -28,10 +31,17 @@ fun KimepRoot() {
     val session by container.sessionStore.state
         .collectAsStateWithLifecycle(initialValue = SessionState.Loading)
 
-    // Record a launch once tracking is actually permitted (first run: right after consent).
+    var showNotice by rememberSaveable { mutableStateOf(false) }
+
+    // Opt-out model: Analytics.track() drops the event only if consent was denied.
+    LaunchedEffect(Unit) {
+        container.analytics.track(AnalyticsEvents.APP_OPEN)
+    }
+
+    // Show the dismissible notice once, until the user makes a choice.
     LaunchedEffect(consent) {
-        if (consent == ConsentState.Granted) {
-            container.analytics.track(AnalyticsEvents.APP_OPEN)
+        if (container.analyticsEnabled && consent == ConsentState.Undecided) {
+            showNotice = true
         }
     }
 
@@ -39,25 +49,6 @@ fun KimepRoot() {
         modifier = Modifier.fillMaxSize(),
         color = MaterialTheme.colorScheme.background,
     ) {
-        if (container.analyticsEnabled && consent == ConsentState.Undecided) {
-            PrivacyConsentScreen(
-                onAccept = {
-                    scope.launch {
-                        container.analyticsStore.setConsent(true)
-                        container.analytics.track(
-                            AnalyticsEvents.CONSENT,
-                            mapOf("decision" to "granted", "source" to "first_run"),
-                        )
-                    }
-                },
-                onDecline = {
-                    // Nothing is sent: tracking only starts once consent is granted.
-                    scope.launch { container.analyticsStore.setConsent(false) }
-                },
-            )
-            return@Surface
-        }
-
         when (val current = session) {
             SessionState.Loading -> LoadingState()
 
@@ -85,5 +76,27 @@ fun KimepRoot() {
                 },
             )
         }
+    }
+
+    if (showNotice) {
+        AnalyticsFirstRunDialog(
+            onKeepEnabled = {
+                showNotice = false
+                scope.launch {
+                    container.analyticsStore.setConsent(true)
+                    container.analytics.track(
+                        AnalyticsEvents.CONSENT,
+                        mapOf("decision" to "granted", "source" to "first_run_notice"),
+                    )
+                }
+            },
+            onOptOut = {
+                showNotice = false
+                scope.launch {
+                    container.analyticsStore.setConsent(false)
+                    container.analyticsStore.clearIdentity()
+                }
+            },
+        )
     }
 }

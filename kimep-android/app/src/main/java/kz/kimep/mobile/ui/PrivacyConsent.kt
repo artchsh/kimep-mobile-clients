@@ -1,108 +1,55 @@
 package kz.kimep.mobile.ui
 
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.imePadding
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.PrivacyTip
 import androidx.compose.material3.AlertDialog
-import androidx.compose.material3.Button
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 
+/**
+ * First-run, dismissible notice. Analytics is on by default (opt-out); this explains
+ * what is collected and offers a one-tap opt-out without blocking the app.
+ */
 @Composable
-fun PrivacyConsentScreen(
-    onAccept: () -> Unit,
-    onDecline: () -> Unit,
+fun AnalyticsFirstRunDialog(
+    onKeepEnabled: () -> Unit,
+    onOptOut: () -> Unit,
 ) {
-    Surface(modifier = Modifier.fillMaxSize()) {
-        Column(
-            modifier = Modifier
-                .fillMaxSize()
-                .imePadding()
-                .padding(24.dp),
-            horizontalAlignment = Alignment.CenterHorizontally,
-        ) {
-            Spacer(Modifier.height(24.dp))
-            Surface(
-                shape = CircleShape,
-                color = MaterialTheme.colorScheme.primaryContainer,
-                modifier = Modifier.size(80.dp),
-            ) {
-                Column(
-                    modifier = Modifier.fillMaxSize(),
-                    verticalArrangement = Arrangement.Center,
-                    horizontalAlignment = Alignment.CenterHorizontally,
-                ) {
-                    Icon(
-                        imageVector = Icons.Filled.PrivacyTip,
-                        contentDescription = null,
-                        modifier = Modifier.size(40.dp),
-                        tint = MaterialTheme.colorScheme.onPrimaryContainer,
-                    )
-                }
-            }
-            Spacer(Modifier.height(20.dp))
-            Text(
-                text = "Your privacy",
-                style = MaterialTheme.typography.headlineSmall,
-                fontWeight = FontWeight.SemiBold,
-            )
-            Spacer(Modifier.height(4.dp))
-            Text(
-                text = "This app collects anonymous usage statistics.",
-                style = MaterialTheme.typography.bodyMedium,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-            )
-
-            Spacer(Modifier.height(20.dp))
-
-            Column(
-                modifier = Modifier
-                    .weight(1f)
-                    .fillMaxWidth()
-                    .verticalScroll(rememberScrollState()),
-            ) {
+    AlertDialog(
+        onDismissRequest = onKeepEnabled,
+        icon = { Icon(Icons.Filled.PrivacyTip, contentDescription = null) },
+        title = { Text("Anonymous statistics") },
+        text = {
+            Column(Modifier.verticalScroll(rememberScrollState())) {
+                Text(
+                    text = "This app collects anonymous usage statistics to see what is " +
+                        "used and what is not. It is on by default.",
+                    style = MaterialTheme.typography.bodyMedium,
+                )
+                Spacer(Modifier.height(12.dp))
                 PrivacyNoticeBody()
             }
-
-            Spacer(Modifier.height(16.dp))
-
-            Button(
-                onClick = onAccept,
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .height(52.dp),
-            ) {
-                Text("Agree and continue", style = MaterialTheme.typography.titleMedium)
-            }
-            Spacer(Modifier.height(4.dp))
-            TextButton(onClick = onDecline, modifier = Modifier.fillMaxWidth()) {
-                Text("Continue without sharing")
-            }
-        }
-    }
+        },
+        confirmButton = {
+            TextButton(onClick = onKeepEnabled) { Text("Keep on") }
+        },
+        dismissButton = {
+            TextButton(onClick = onOptOut) { Text("Turn off") }
+        },
+    )
 }
 
 @Composable
@@ -112,10 +59,7 @@ fun PrivacyNoticeDialog(onDismiss: () -> Unit) {
         icon = { Icon(Icons.Filled.PrivacyTip, contentDescription = null) },
         title = { Text("Anonymous statistics") },
         text = {
-            Column(
-                modifier = Modifier
-                    .verticalScroll(rememberScrollState()),
-            ) {
+            Column(Modifier.verticalScroll(rememberScrollState())) {
                 PrivacyNoticeBody()
             }
         },
@@ -162,8 +106,9 @@ private fun PrivacyNoticeBody() {
         NoticeSection(
             title = "Your control",
             lines = listOf(
-                "You can turn this off at any time in Settings and it takes effect " +
-                    "immediately.",
+                "This is on by default and you can turn it off at any time in " +
+                    "Settings → Privacy. It takes effect immediately, and turning it " +
+                    "off also forgets the random ID.",
             ),
         )
     }
