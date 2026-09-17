@@ -30,3 +30,4 @@ calendar/out.xml
 
 # ---- macOS ----
 .DS_Store
+app-website/releases.json

@@ -1,0 +1,65 @@
+name: Pages
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'app-website/**'
+      - '.github/workflows/pages.yml'
+  release:
+    types: [ published, edited, deleted ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      # Snapshot the release list at deploy time so the site never depends on the
+      # GitHub API from the visitor's browser (no rate limits, no CORS).
+      - name: Generate releases.json
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api "repos/${{ github.repository }}/releases?per_page=20" \
+            --jq '{releases: [.[] | {
+              tag: .tag_name,
+              name: (.name // .tag_name),
+              prerelease: .prerelease,
+              publishedAt: .published_at,
+              htmlUrl: .html_url,
+              apkUrl: ([.assets[] | select(.name | endswith(".apk"))][0].browser_download_url // null),
+              apkSize: ([.assets[] | select(.name | endswith(".apk"))][0].size // null)
+            }]}' > app-website/releases.json \
+            || echo '{"releases":[]}' > app-website/releases.json
+          echo "----- releases.json -----"
+          cat app-website/releases.json
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v6
+
+      - name: Upload site
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: app-website
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>KIMEP Mobile — unofficial Android client</title>
+<meta name="description" content="An unofficial Android client for the KIMEP student portal, built by a student. Not affiliated with, endorsed by, or connected to KIMEP University." />
+<meta name="color-scheme" content="light dark" />
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ── disclaimer ticker: the unofficial notice, everywhere ─────────────── -->
+<div class="ticker" role="note" aria-label="Disclaimer">
+  <div class="ticker__track">
+    <span>Unofficial app</span><i>◆</i>
+    <span>Not affiliated with KIMEP University</span><i>◆</i>
+    <span>Not endorsed by KIMEP University</span><i>◆</i>
+    <span>Built by a student</span><i>◆</i>
+    <span>KIMEP has nothing to do with this project</span><i>◆</i>
+    <span>Unofficial app</span><i>◆</i>
+    <span>Not affiliated with KIMEP University</span><i>◆</i>
+    <span>Not endorsed by KIMEP University</span><i>◆</i>
+    <span>Built by a student</span><i>◆</i>
+    <span>KIMEP has nothing to do with this project</span><i>◆</i>
+  </div>
+</div>
+
+<header class="masthead">
+  <a class="wordmark" href="#top">
+    <span class="wordmark__mark" aria-hidden="true">KM</span>
+    <span class="wordmark__text">KIMEP&nbsp;Mobile<em>unofficial client</em></span>
+  </a>
+  <nav class="masthead__nav">
+    <a href="#download">Download</a>
+    <a href="#screens">Screens</a>
+    <a href="#features">Features</a>
+    <a href="#privacy">Privacy</a>
+    <a href="https://github.com/artchsh/kimep-mobile-clients" rel="noopener">Source</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- ── hero ───────────────────────────────────────────────────────────── -->
+  <section class="hero">
+    <div class="hero__grid" aria-hidden="true"></div>
+
+    <div class="hero__copy">
+      <p class="eyebrow">
+        <span class="dot"></span> Unofficial Android client · not by KIMEP
+      </p>
+      <h1>
+        Your timetable,
+        <span class="hero__accent">without the</span>
+        portal.
+      </h1>
+      <p class="lede">
+        A student-built Android app for the KIMEP student portal: schedule, grades and the
+        academic calendar, with class reminders. It talks to the same old mobile APIs the
+        store app used.
+      </p>
+
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="#download">Download the APK</a>
+        <a class="btn btn--ghost" href="https://github.com/artchsh/kimep-mobile-clients" rel="noopener">View source</a>
+      </div>
+
+      <p class="micro warning">
+        Independent project. KIMEP University does not run, review or support this app.
+      </p>
+    </div>
+
+    <figure class="hero__figure">
+      <img src="assets/screens/schedule.png" alt="Schedule screen with today highlighted" />
+      <div class="stamp" aria-hidden="true">
+        <svg viewBox="0 0 200 200" role="img" aria-label="Unofficial stamp">
+          <defs>
+            <path id="stampArc" d="M100,100 m-72,0 a72,72 0 1,1 144,0 a72,72 0 1,1 -144,0" />
+          </defs>
+          <circle cx="100" cy="100" r="88" class="stamp__ring" />
+          <circle cx="100" cy="100" r="80" class="stamp__ring stamp__ring--inner" />
+          <text class="stamp__arc">
+            <textPath href="#stampArc" startOffset="50%" text-anchor="middle">
+              UNOFFICIAL · NOT ENDORSED BY KIMEP ·
+            </textPath>
+          </text>
+          <text class="stamp__big" x="100" y="94" text-anchor="middle">NOT</text>
+          <text class="stamp__big" x="100" y="126" text-anchor="middle">KIMEP</text>
+        </svg>
+      </div>
+    </figure>
+  </section>
+
+  <!-- ── download ───────────────────────────────────────────────────────── -->
+  <section id="download" class="band band--ink">
+    <div class="section-head">
+      <p class="kicker">01 — Get the app</p>
+      <h2>Download</h2>
+    </div>
+
+    <div class="download">
+      <div class="download__card" id="download-card" aria-live="polite">
+        <!-- filled by app.js -->
+        <p class="skeleton">Looking up the latest build…</p>
+      </div>
+
+      <aside class="download__aside">
+        <h3>Before you install</h3>
+        <ul class="checklist">
+          <li>Android <strong>8.0</strong> or newer.</li>
+          <li>You will need to allow installing apps from your browser — Android will warn you, that's normal for any app outside the Play Store.</li>
+          <li>Sign in with your own KIMEP account. The app stores your session on your device only.</li>
+        </ul>
+        <p class="micro warning">
+          This APK is built and signed by an individual student, not by KIMEP University.
+          KIMEP has not reviewed it.
+        </p>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ── screens ────────────────────────────────────────────────────────── -->
+  <section id="screens" class="band">
+    <div class="section-head">
+      <p class="kicker">02 — Look at it</p>
+      <h2>Screens</h2>
+    </div>
+    <div class="screens" role="list">
+      <figure role="listitem"><img src="assets/screens/schedule.png" alt="Schedule" /><figcaption>Schedule — today highlighted</figcaption></figure>
+      <figure role="listitem"><img src="assets/screens/grades.png" alt="Grades" /><figcaption>Grades &amp; transcript</figcaption></figure>
+      <figure role="listitem"><img src="assets/screens/calendar.png" alt="Academic calendar" /><figcaption>Academic calendar</figcaption></figure>
+      <figure role="listitem"><img src="assets/screens/finals.png" alt="Finals" /><figcaption>Final exams</figcaption></figure>
+      <figure role="listitem"><img src="assets/screens/settings.png" alt="Reminders and privacy" /><figcaption>Reminders &amp; privacy</figcaption></figure>
+    </div>
+  </section>
+
+  <!-- ── features ───────────────────────────────────────────────────────── -->
+  <section id="features" class="band band--paper2">
+    <div class="section-head">
+      <p class="kicker">03 — What it does</p>
+      <h2>Features</h2>
+    </div>
+    <ol class="features">
+      <li><span class="features__num">01</span><h3>Schedule</h3><p>Your weekly timetable grouped by day, with today highlighted, a midterm-week banner and pull to refresh. Cached, so it opens instantly and updates in the background.</p></li>
+      <li><span class="features__num">02</span><h3>Grades</h3><p>Cumulative GPA and credits, current-term assessment scores, and your full transcript grouped by semester.</p></li>
+      <li><span class="features__num">03</span><h3>Academic calendar</h3><p>The official calendar PDF parsed into the app — both academic years, every semester, with the current date range marked.</p></li>
+      <li><span class="features__num">04</span><h3>Class reminders</h3><p>Notifications one hour and ten minutes before each class, plus a final-exam reminder. Each one can be switched off individually.</p></li>
+      <li><span class="features__num">05</span><h3>Final exams</h3><p>A dedicated view for the exam timetable, once the university publishes it.</p></li>
+      <li><span class="features__num">06</span><h3>Material You</h3><p>Native Material 3 design that follows your phone's colours, light and dark, edge to edge.</p></li>
+    </ol>
+  </section>
+
+  <!-- ── privacy ────────────────────────────────────────────────────────── -->
+  <section id="privacy" class="band">
+    <div class="section-head">
+      <p class="kicker">04 — What it knows about you</p>
+      <h2>Privacy</h2>
+    </div>
+    <div class="prose">
+      <p>
+        The app can send <strong>anonymous usage statistics</strong> — which screens are
+        opened, which buttons are tapped, and a random ID generated on your device — to a
+        self-hosted <a href="https://umami.is" rel="noopener">Umami</a> instance, so the
+        developer can see what is used and what is not. This is a proof of concept.
+      </p>
+      <p>
+        It never collects your name, student ID, password, session, grades, courses or
+        anything you view, and it never sends real URLs. Tracking is
+        <strong>on by default</strong> with a clearly labelled notice on first launch and a
+        one-tap <strong>opt-out in Settings</strong>; switching it off also forgets the
+        random ID.
+      </p>
+      <p class="micro">
+        If the developer ever shares this data, it would only be aggregates with
+        KIMEP administration to inform product decisions. Nothing is shared today.
+      </p>
+    </div>
+  </section>
+
+  <!-- ── all releases ───────────────────────────────────────────────────── -->
+  <section id="releases" class="band band--paper2">
+    <div class="section-head">
+      <p class="kicker">05 — Every build</p>
+      <h2>Releases</h2>
+    </div>
+    <div id="release-list" class="releases">
+      <p class="skeleton">Loading releases…</p>
+    </div>
+  </section>
+
+  <!-- ── disclaimer ─────────────────────────────────────────────────────── -->
+  <section id="disclaimer" class="band band--stamp">
+    <div class="disclaimer">
+      <div class="disclaimer__stamp" aria-hidden="true">UNOFFICIAL</div>
+      <div class="disclaimer__body">
+        <h2>This app is not KIMEP.</h2>
+        <p>
+          This is an <strong>unofficial, independent project built by a student</strong>.
+          It is <strong>not affiliated with, endorsed by, sponsored by, or connected to
+          KIMEP University</strong> in any way. KIMEP University has nothing to do with
+          this app and has not reviewed, approved or supported it.
+        </p>
+        <p>
+          "KIMEP" is used only to describe what the app connects to. All trademarks belong
+          to their owners. Use at your own risk; the developer is not responsible for
+          anything that happens as a result of using it.
+        </p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p class="footer__disclaimer">
+    <strong>Unofficial.</strong> Not affiliated with, endorsed by, or connected to KIMEP
+    University. KIMEP has nothing to do with this project.
+  </p>
+  <nav class="footer__nav">
+    <a href="https://github.com/artchsh/kimep-mobile-clients" rel="noopener">GitHub</a>
+    <a href="https://github.com/artchsh/kimep-mobile-clients/releases" rel="noopener">Releases</a>
+    <a href="https://github.com/artchsh/kimep-mobile-clients/blob/main/docs/ANALYTICS.md" rel="noopener">Analytics</a>
+  </nav>
+  <p class="footer__fine">Built with AI assistance · DeepSeek V4.1 Flash via OpenCode.</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
