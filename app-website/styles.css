@@ -18,6 +18,16 @@
   --stamp:      #B7332A;
   --paper-on-ink: #F1ECE2;
 
+  /* Scheme-independent "print" tokens: dark panels and paper cards must keep the
+     same look whether the page is in light or dark mode, otherwise the semantic
+     band overrides below produce light-on-light text. */
+  --panel:       #17140F;
+  --panel-fg:    #F1ECE2;
+  --panel-muted: #C6BDAA;
+  --panel-rule:  rgba(241, 236, 226, .22);
+  --card:        #F1ECE2;
+  --card-fg:     #17140F;
+
   --font-display: "Bricolage Grotesque", "Arial Black", sans-serif;
   --font-body:    "Newsreader", Georgia, serif;
   --font-mono:    "IBM Plex Mono", ui-monospace, monospace;
@@ -80,10 +90,10 @@ h3 { font-size: 1.15rem; font-weight: 700; letter-spacing: -.01em; }
 
 /* ── disclaimer ticker ─────────────────────────────────────────────────── */
 .ticker {
-  background: var(--ink);
-  color: var(--paper-on-ink);
+  background: var(--panel);
+  color: var(--panel-fg);
   overflow: hidden;
-  border-bottom: 1px solid var(--ink);
+  border-bottom: 1px solid var(--panel);
   position: sticky;
   top: 0;
   z-index: 50;
@@ -145,9 +155,9 @@ h3 { font-size: 1.15rem; font-weight: 700; letter-spacing: -.01em; }
 .band { padding: clamp(56px, 8vw, 110px) var(--gutter); }
 .band > * { max-width: var(--maxw); margin-inline: auto; }
 .band--ink {
-  background: var(--ink); color: var(--paper-on-ink);
-  --rule: rgba(241,236,226,.22); --rule-soft: rgba(241,236,226,.12);
-  --ink-soft: #B4AB98;
+  background: var(--panel); color: var(--panel-fg);
+  --rule: var(--panel-rule); --rule-soft: rgba(241,236,226,.12);
+  --ink-soft: var(--panel-muted);
 }
 .band--paper2 { background: var(--paper-2); }
 .band--stamp { background: var(--stamp); color: #FBEFE7; }
@@ -157,7 +167,7 @@ h3 { font-size: 1.15rem; font-weight: 700; letter-spacing: -.01em; }
   font-family: var(--font-mono); font-size: .7rem; letter-spacing: .24em;
   text-transform: uppercase; color: var(--ink-soft); margin: 0 0 10px;
 }
-.band--ink .kicker { color: #B4AB98; }
+.band--ink .kicker { color: var(--panel-muted); }
 
 /* ── hero ──────────────────────────────────────────────────────────────── */
 .hero {
@@ -239,7 +249,9 @@ h3 { font-size: 1.15rem; font-weight: 700; letter-spacing: -.01em; }
 /* ── download ──────────────────────────────────────────────────────────── */
 .download { display: grid; grid-template-columns: 1.1fr .9fr; gap: clamp(20px, 3vw, 40px); align-items: start; }
 .download__card {
-  background: var(--paper); color: var(--ink);
+  background: var(--card); color: var(--card-fg);
+  --ink: #17140F; --paper-on-ink: #F1ECE2;
+  --ink-soft: #5B5344; --rule: rgba(23, 20, 15, .18);
   border: 1px solid var(--rule); padding: clamp(24px, 3vw, 40px);
   position: relative;
 }
@@ -262,7 +274,7 @@ h3 { font-size: 1.15rem; font-weight: 700; letter-spacing: -.01em; }
 .checklist { list-style: none; padding: 0; margin: 0 0 20px; }
 .checklist li { padding-left: 26px; position: relative; margin-bottom: 10px; color: var(--ink-soft); }
 .checklist li::before { content: "→"; position: absolute; left: 0; font-family: var(--font-mono); }
-.band--ink .checklist li { color: #C6BDAA; }
+.band--ink .checklist li { color: var(--panel-muted); }
 
 .micro { font-family: var(--font-mono); font-size: .7rem; line-height: 1.7; letter-spacing: .03em; }
 .warning { color: var(--stamp); border-left: 2px solid var(--stamp); padding-left: 12px; }
@@ -350,14 +362,14 @@ h3 { font-size: 1.15rem; font-weight: 700; letter-spacing: -.01em; }
 
 /* ── footer ────────────────────────────────────────────────────────────── */
 .footer {
-  background: var(--ink); color: var(--paper-on-ink);
+  background: var(--panel); color: var(--panel-fg);
   padding: clamp(36px, 5vw, 64px) var(--gutter);
   display: flex; flex-direction: column; gap: 16px;
 }
 .footer__disclaimer {
   max-width: var(--maxw); margin: 0 auto; width: 100%;
   font-family: var(--font-mono); font-size: .72rem; letter-spacing: .06em;
-  line-height: 1.8; color: #C6BDAA;
+  line-height: 1.8; color: var(--panel-muted);
 }
 .footer__disclaimer strong { color: #F0A99E; }
 .footer__nav {
