@@ -153,3 +153,9 @@ python3 tools/parse_calendar.py     # needs poppler (pdftotext)
 Unofficial and not affiliated with KIMEP University. Personal educational project that
 uses the university's old mobile user-facing APIs. No credentials or captured personal
 data are committed to this repository.
+
+## Built with AI assistance
+
+In the interest of transparency: the current MVP was created with the help of AI —
+**DeepSeek V4.1 Flash**, running in the **OpenCode** harness under an **OpenCode GO**
+subscription — alongside manual review and testing on a real device.
